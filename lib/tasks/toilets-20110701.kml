@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="utf-8" ?><kml xmlns="http://earth.google.com/kml/2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://earth.google.com/kml/2.2 http://code.google.com/apis/kml/schema/kml22beta.xsd"><Document><name>wellington-city-public-conveniences</name>
+<Style id="wellington-city-public-conveniencesStyle"><IconStyle><color>ff993300</color>
+<scale>0.2</scale>
+<Icon><href>http://maps.google.com/mapfiles/kml/pal2/icon18.png</href>
+</Icon>
+</IconStyle>
+<LineStyle><color>ff993300</color>
+<width>2</width>
+</LineStyle>
+<PolyStyle><color>7f993300</color>
+</PolyStyle>
+</Style>
+<Folder id="wellington-city-public-conveniences"><name>wellington-city-public-conveniences</name>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Oriental Bay</SimpleData>
+<SimpleData name="open_hou_1">24 Hours</SimpleData>
+<SimpleData name="location">Wishing Well Gardens - Oriental Parade</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.792837,-41.291505</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Te Aro</SimpleData>
+<SimpleData name="open_hou_1">3 cubicles &amp; Urinal Rm 24 hours, 3 Cubicles 7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Courtenay Place - Cambridge Terrace end - City</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.782900,-41.293995</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Te Aro</SimpleData>
+<SimpleData name="open_hou_1">Mon - Thurs: 7.30am - 6.00pm, Fri: 7.30am - 7.00pm</SimpleData>
+<SimpleData name="location">Te Aro Park - Dixon Street - City</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.777485,-41.291902</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Pipitea</SimpleData>
+<SimpleData name="open_hou_1">24 Hours</SimpleData>
+<SimpleData name="location">Bowen St - between Terrace &amp; Lambton Qyay - City</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.777015,-41.278840</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Wellington Central</SimpleData>
+<SimpleData name="open_hou_1">Mon - Thurs: 7.30am - 6.00pm, Fri: 7.30am - 7.00pm, Sat: 8.00am - 4.00pm, Sun: 10.00am - 4.00pm, 1 cubicle 24 hours</SimpleData>
+<SimpleData name="location">ANZ - Lambton Quay &amp; Featherston St Corner - City</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.775794,-41.285114</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">Yes</SimpleData>
+<SimpleData name="gender">M&amp;F</SimpleData>
+<SimpleData name="disabled">No</SimpleData>
+<SimpleData name="suburb">Roseneath</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Evans Bay Parade - Balaena Bay</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.802748,-41.292112</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">Yes</SimpleData>
+<SimpleData name="gender">M&amp;F</SimpleData>
+<SimpleData name="disabled">No</SimpleData>
+<SimpleData name="suburb">Hataitai</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Evans Bay Parade - Hataitai Beach</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.799210,-41.305978</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Hataitai</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Taurima Street - Hataitai</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.793275,-41.304420</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Kilbirnie</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Bay Road - Kilbirnie</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.794463,-41.319021</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">M&amp;F</SimpleData>
+<SimpleData name="disabled">No</SimpleData>
+<SimpleData name="suburb">Lyall Bay</SimpleData>
+<SimpleData name="open_hou_1">24 Hours</SimpleData>
+<SimpleData name="location">Queens Drive - Lyall Bay</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.791871,-41.331479</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">Yes</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes (toilets only)</SimpleData>
+<SimpleData name="suburb">Lyall Bay</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm, Changing rooms closed 1 June - 31 August</SimpleData>
+<SimpleData name="location">Lyall Bay Surf Club - Lyall Bay</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.794170,-41.329973</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Seatoun</SimpleData>
+<SimpleData name="open_hou_1">24 Hours</SimpleData>
+<SimpleData name="location">Worser Bay - beach side opp. bottom of Awa Road</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.829942,-41.312541</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Miramar</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Miramar Avenue/Park Road Intersection - Miramar</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.816432,-41.316203</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Seatoun</SimpleData>
+<SimpleData name="open_hou_1">24 Hours</SimpleData>
+<SimpleData name="location">Dundas Street - Seatoun</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.830527,-41.322500</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">Yes</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Seatoun</SimpleData>
+<SimpleData name="open_hou_1">Mon - Wed: 24 Hours, Thu - Sun: 7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Churchill Park - Seatoun Beach</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.834001,-41.322031</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Miramar</SimpleData>
+<SimpleData name="open_hou_1">24 Hours</SimpleData>
+<SimpleData name="location">Broadway/Ira Street Corner - Strathmore</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.820630,-41.324393</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Newtown</SimpleData>
+<SimpleData name="open_hou_1">24 Hours</SimpleData>
+<SimpleData name="location">Constable Street/Riddiford Street Corner - Newtown</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.780267,-41.313431</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">Yes</SimpleData>
+<SimpleData name="gender">M&amp;F</SimpleData>
+<SimpleData name="disabled">No</SimpleData>
+<SimpleData name="suburb">Houghton Bay</SimpleData>
+<SimpleData name="open_hou_1">Winter: 7.00am - 7.00pm, Summer: 7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Princess Bay - The Esplanade</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.788789,-41.345087</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Island Bay</SimpleData>
+<SimpleData name="open_hou_1">1 cubicle 24 hours, 1 cubicle 7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Shorland Park - Island Bay</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.770832,-41.343217</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Island Bay</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 10.00pm</SimpleData>
+<SimpleData name="location">Medway Street - Island Bay</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.773158,-41.334884</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Berhampore</SimpleData>
+<SimpleData name="open_hou_1">24 Hours</SimpleData>
+<SimpleData name="location">Luxford Street - Berhampore</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.775797,-41.319950</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">M&amp;F</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Kingston</SimpleData>
+<SimpleData name="open_hou_1">24 Hours</SimpleData>
+<SimpleData name="location">Quebec St - Kingston</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.763301,-41.323791</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Brooklyn</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Central Park - Brooklyn</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.768028,-41.300053</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Brooklyn</SimpleData>
+<SimpleData name="open_hou_1">24 Hours</SimpleData>
+<SimpleData name="location">Jefferson St - Brooklyn</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.765333,-41.304727</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Aro Valley</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Aro Street Park - Aro Valley</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.768030,-41.295307</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Kelburn</SimpleData>
+<SimpleData name="open_hou_1">6.00am - 10.00pm</SimpleData>
+<SimpleData name="location">Skyline Site -Top of Cable Car - Kelburn</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.767536,-41.285644</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Karori</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Next to Karori Library - Karori</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.737673,-41.284804</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">M&amp;F</SimpleData>
+<SimpleData name="disabled">No</SimpleData>
+<SimpleData name="suburb">Karori</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Karori Cemetery - Karori</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.750453,-41.279452</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">Yes</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Makara Beach</SimpleData>
+<SimpleData name="open_hou_1">Winter: 7.00am - 6.00pm, Summer: 7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Makara Beach - Makara</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.713351,-41.220131</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Northland</SimpleData>
+<SimpleData name="open_hou_1">24 Hours</SimpleData>
+<SimpleData name="location">Randwick Rd - Northland</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.758242,-41.282900</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Wadestown</SimpleData>
+<SimpleData name="open_hou_1">24 Hours</SimpleData>
+<SimpleData name="location">Wadestown Road- Wadestown</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.774183,-41.262059</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Ngaio</SimpleData>
+<SimpleData name="open_hou_1">24 Hours</SimpleData>
+<SimpleData name="location">Collingwood Street - Ngaio</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.773075,-41.249981</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Khandallah</SimpleData>
+<SimpleData name="open_hou_1">24 Hours</SimpleData>
+<SimpleData name="location">Ganges Road - Khandallah</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.791273,-41.246721</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Khandallah</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Woodmancote Street - Khandallah</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.788696,-41.241996</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Johnsonville</SimpleData>
+<SimpleData name="open_hou_1">24 Hours</SimpleData>
+<SimpleData name="location">Next to Johnsonville Library - Johnsonville</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.806842,-41.224844</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">M&amp;F</SimpleData>
+<SimpleData name="disabled">No</SimpleData>
+<SimpleData name="suburb">Tawa</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Willowbank Reserve - Boscobel Lane - Tawa</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.827080,-41.184341</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">M&amp;F</SimpleData>
+<SimpleData name="disabled">No</SimpleData>
+<SimpleData name="suburb">Tawa</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Grasslees Reserve - Davies Street -Tawa</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.828601,-41.164251</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Tawa</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 10.00pm</SimpleData>
+<SimpleData name="location">Next to Tawa Library - Tawa</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.825122,-41.171204</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">M&amp;F</SimpleData>
+<SimpleData name="disabled">No</SimpleData>
+<SimpleData name="suburb">Newlands</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Newlands Mall - McMillan Court - Newlands</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.822929,-41.223348</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Kelburn</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Botanic Gardens - Begonia House</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.769307,-41.281049</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">M&amp;F</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Kelburn</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Botanic Gardens - Rose Garden</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.769142,-41.281025</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">M&amp;F</SimpleData>
+<SimpleData name="disabled">No</SimpleData>
+<SimpleData name="suburb">Kelburn</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Botanic Gardens - Play Area</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.765678,-41.283556</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Oriental Bay</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Oriental Bay Band Rotunda -Oriental Bay</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.795022,-41.290999</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">Yes</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Oriental Bay</SimpleData>
+<SimpleData name="open_hou_1">Winter: 7.00am - 7.00pm Summer 7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Freyberg Beach - Oriental Bay</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.790068,-41.290587</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Wellington Central</SimpleData>
+<SimpleData name="open_hou_1">6.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Civic Square Conveniences - City</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.777759,-41.288607</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Kelburn</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Botanic Gardens - Main Garden Founders Entrance</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.765791,-41.281637</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">M&amp;F</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Kelburn</SimpleData>
+<SimpleData name="open_hou_1">9.00am - 4.00pm</SimpleData>
+<SimpleData name="location">Botanic Gardens - Treehouse</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.766149,-41.282172</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">Yes</SimpleData>
+<SimpleData name="gender">M&amp;F</SimpleData>
+<SimpleData name="disabled">No</SimpleData>
+<SimpleData name="suburb">Island Bay</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm Summer During Daylight Savings, Closed Winter</SimpleData>
+<SimpleData name="location">Island Bay Surf Club - Island Bay</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.773577,-41.343158</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">M&amp;F</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Wellington Central</SimpleData>
+<SimpleData name="open_hou_1">During Library opening hours</SimpleData>
+<SimpleData name="location">Central Library - Wakefield Street - City</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.776601,-41.288031</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">Yes</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes (toilets only)</SimpleData>
+<SimpleData name="suburb">Karaka Bays</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm, Changing rooms closed 1 June - 31 August</SimpleData>
+<SimpleData name="location">Scorching Bay Beach Pavillion - Scorching Bay</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.832612,-41.297294</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">M&amp;F</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Wellington Central</SimpleData>
+<SimpleData name="open_hou_1">During Council admin building opening hours</SimpleData>
+<SimpleData name="location">Wellington City Council - Wakefield St - City</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.777018,-41.289029</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Wilton</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Otari Wiltons Bush - Information Centre</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.757770,-41.267841</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Hataitai</SimpleData>
+<SimpleData name="open_hou_1">8.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Evans Bay Marina - Boatshed</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.797808,-41.311210</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Karori</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 10.00pm</SimpleData>
+<SimpleData name="location">Makara Peak Mountain Bike Carpark - Karori</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.722041,-41.297286</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">No</SimpleData>
+<SimpleData name="suburb">Paparangi</SimpleData>
+<SimpleData name="open_hou_1">Open with Park bookings</SimpleData>
+<SimpleData name="location">Helston Park - Helston Rd</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.813568,-41.220196</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">Yes</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Kilbirnie</SimpleData>
+<SimpleData name="open_hou_1">Open with Park bookings</SimpleData>
+<SimpleData name="location">Kilbirnie Park - Kilbirnie Crescent</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.793126,-41.314332</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">M&amp;F</SimpleData>
+<SimpleData name="disabled">No</SimpleData>
+<SimpleData name="suburb">Tawa</SimpleData>
+<SimpleData name="open_hou_1">Open with Park bookings</SimpleData>
+<SimpleData name="location">Lyndhurst Park - Lyndhurst Road</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.821589,-41.171813</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">M&amp;F</SimpleData>
+<SimpleData name="disabled">No</SimpleData>
+<SimpleData name="suburb">Miramar</SimpleData>
+<SimpleData name="open_hou_1">Open with Park bookings</SimpleData>
+<SimpleData name="location">Miramar Park</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.823774,-41.309994</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">M&amp;F</SimpleData>
+<SimpleData name="disabled">No</SimpleData>
+<SimpleData name="suburb">Miramar</SimpleData>
+<SimpleData name="open_hou_1">Open with Park bookings</SimpleData>
+<SimpleData name="location">Polo Ground</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.817513,-41.315696</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">M&amp;F</SimpleData>
+<SimpleData name="disabled">No</SimpleData>
+<SimpleData name="suburb">Berhampore</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Berhampore Public Golf Course - Berhampore</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.774550,-41.325004</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">Yes</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Seatoun</SimpleData>
+<SimpleData name="open_hou_1">24 Hours, Changing rooms open with Park bookings</SimpleData>
+<SimpleData name="location">Seatoun Park - Hector St</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.834556,-41.325498</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">Yes</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Seatoun</SimpleData>
+<SimpleData name="open_hou_1">24 hours, changing rooms closed 1 June - 31 August</SimpleData>
+<SimpleData name="location">Worser Bay Beach Pavilion - Marine Parade</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.828088,-41.313531</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Wellington Central</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm (Winter), 6.00am - 10.00pm (Summer)</SimpleData>
+<SimpleData name="location">Waitangi Pk Kiosk Toilets</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.785905,-41.291910</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Mt Victoria</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Alexandra Road - Mt Victoria</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.792838,-41.298067</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">No</SimpleData>
+<SimpleData name="suburb">Makara</SimpleData>
+<SimpleData name="open_hou_1">Winter: 7.30am - 4.30pm, Summer: 7.30am - 9.00pm</SimpleData>
+<SimpleData name="location">Makara Cemetery - South Makara Road</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.702905,-41.270218</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">M&amp;F</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Wellington Central</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Herd Street</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.785173,-41.290970</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Owhiro Bay</SimpleData>
+<SimpleData name="open_hou_1" />
+<SimpleData name="location">Owhiro Bay Visitor Centre</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.749955,-41.348297</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Wilton</SimpleData>
+<SimpleData name="open_hou_1" />
+<SimpleData name="location">Otari Wilton's Bush - Picnic Area Toilets</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.755376,-41.266497</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Makara</SimpleData>
+<SimpleData name="open_hou_1">24 Hours</SimpleData>
+<SimpleData name="location">Makara Cemetery 2 - South Makara Road</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.702903,-41.274559</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">Yes</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Newtown</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Newtown Park</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.782375,-41.319766</coordinates>
+</Point>
+</Placemark>
+<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
+<SimpleData name="gender">Unisex</SimpleData>
+<SimpleData name="disabled">Yes</SimpleData>
+<SimpleData name="suburb">Karori</SimpleData>
+<SimpleData name="open_hou_1">7.00am - 9.00pm</SimpleData>
+<SimpleData name="location">Karori Park</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point><coordinates> 174.724906,-41.286935</coordinates>
+</Point>
+</Placemark>
+</Folder>
+<Schema id="wellington-city-public-conveniencesId" name="wellington-city-public-conveniences"><SimpleField name="change_rm" type="string" />
+<SimpleField name="gender" type="string" />
+<SimpleField name="disabled" type="string" />
+<SimpleField name="suburb" type="string" />
+<SimpleField name="open_hou_1" type="string" />
+<SimpleField name="location" type="string" />
+</Schema>
+</Document>
+</kml>
