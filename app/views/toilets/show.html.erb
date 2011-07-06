@@ -96,10 +96,9 @@
 	
 	<h3>Crapprs near here:</h3>
 	<ul>
-		 <% @near_toilets.each do |toilet| %>
-		<li><%= link_to toilet.location.html_safe, toilet %> (<%= distanceize(toilet.distance) %>)</li>
-		 <% end %>
-	</ul>
+          <%= render(:partial => 'near_toilet', :collection => @near_toilets) || 
+				"<li>Sorry, there are no toilets near here. This Crappr might just have to do!</li>".html_safe %>
+    </ul>
 </div>
 <div id="map_div" class="show"></div>
 <div id="pana" class="show"></div>
