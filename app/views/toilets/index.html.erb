@@ -1,0 +1,22 @@
+<script type='text/javascript'>
+	
+    $(function()
+    {
+		set_map_height_to($(document).height());
+		
+		drawMap(174.613088, -41.613483, 175.00124, -40.873161, google.maps.MapTypeId.TERRAIN, 11);
+
+		$.ajax({
+			      beforeSend      : function(request) { request.setRequestHeader("Accept", "text/javascript"); },
+			      type            : 'GET',
+			      url             : '/toilets',
+				  success		  : function() { loadToilets(); 
+												 var mcOptions     = { gridSize: 50, maxZoom: 12 };
+												 var markerCluster = new MarkerClusterer(map, markers, mcOptions);
+												}
+			});
+
+    });
+
+</script>
+<div id="map_div"></div>

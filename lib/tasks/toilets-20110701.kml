@@ -1,7 +1,13 @@
-<?xml version="1.0" encoding="utf-8" ?><kml xmlns="http://earth.google.com/kml/2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://earth.google.com/kml/2.2 http://code.google.com/apis/kml/schema/kml22beta.xsd"><Document><name>wellington-city-public-conveniences</name>
+<?xml version="1.0" encoding="utf-8" ?>
+
+<kml xmlns="http://earth.google.com/kml/2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://earth.google.com/kml/2.2 http://code.google.com/apis/kml/schema/kml22beta.xsd">
+  
+<Document>
+  <name>wellington-city-public-conveniences</name>
 <Style id="wellington-city-public-conveniencesStyle"><IconStyle><color>ff993300</color>
 <scale>0.2</scale>
-<Icon><href>http://maps.google.com/mapfiles/kml/pal2/icon18.png</href>
+<Icon>
+  <href>http://maps.google.com/mapfiles/kml/pal2/icon18.png</href>
 </Icon>
 </IconStyle>
 <LineStyle><color>ff993300</color>
@@ -10,19 +16,26 @@
 <PolyStyle><color>7f993300</color>
 </PolyStyle>
 </Style>
-<Folder id="wellington-city-public-conveniences"><name>wellington-city-public-conveniences</name>
-<Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
-<ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
-<SimpleData name="gender">Unisex</SimpleData>
-<SimpleData name="disabled">Yes</SimpleData>
-<SimpleData name="suburb">Oriental Bay</SimpleData>
-<SimpleData name="open_hou_1">24 Hours</SimpleData>
-<SimpleData name="location">Wishing Well Gardens - Oriental Parade</SimpleData>
-</SchemaData>
-</ExtendedData>
-<Point><coordinates> 174.792837,-41.291505</coordinates>
+<Folder id="wellington-city-public-conveniences">
+  
+  <name>wellington-city-public-conveniences</name>
+<Placemark>
+  <styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
+    <ExtendedData>
+      <SchemaData schemaUrl="#wellington-city-public-conveniencesId">
+        <SimpleData name="change_rm">No</SimpleData>
+        <SimpleData name="gender">Unisex</SimpleData>
+        <SimpleData name="disabled">Yes</SimpleData>
+        <SimpleData name="suburb">Oriental Bay</SimpleData>
+        <SimpleData name="open_hou_1">24 Hours</SimpleData>
+        <SimpleData name="location">Wishing Well Gardens - Oriental Parade</SimpleData>
+      </SchemaData>
+    </ExtendedData>
+<Point>
+  <coordinates> 174.792837,-41.291505</coordinates>
 </Point>
 </Placemark>
+
 <Placemark><styleUrl>#wellington-city-public-conveniencesStyle</styleUrl>
 <ExtendedData><SchemaData schemaUrl="#wellington-city-public-conveniencesId"><SimpleData name="change_rm">No</SimpleData>
 <SimpleData name="gender">Unisex</SimpleData>
@@ -864,6 +877,7 @@
 </Point>
 </Placemark>
 </Folder>
+
 <Schema id="wellington-city-public-conveniencesId" name="wellington-city-public-conveniences"><SimpleField name="change_rm" type="string" />
 <SimpleField name="gender" type="string" />
 <SimpleField name="disabled" type="string" />

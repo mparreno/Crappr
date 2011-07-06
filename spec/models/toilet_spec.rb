@@ -7,9 +7,13 @@ describe Toilet do
   describe "attributes" do
     it "should have necessary attributes" do
       VALID_ATTRS.each do |att|
-        Toliet.new.should respond_to(att)
+        Toilet.new.should respond_to(att)
       end
     end
   end
-  pending "add some examples to (or delete) #{__FILE__}"
+  
+  describe "Class method - near" do
+    pending "Should find all toilets near a location"
+  end
+  
 end

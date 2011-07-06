@@ -3,12 +3,23 @@
 <head>
   <title>Crappr</title>
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+  <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+  <%= javascript_include_tag 'markerclusterer_compiled', :defaults  %>
+  
+
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
+	<div id="header"> 
+		<%= yield :header %>
+		<h1><a href="/">Crappr</a></h1> 
+		<h2>... Well, The public ones at least</h2>
+	</div>
+	
+	<div id="content"> 
+		<%= yield %>
+	</div>
 
 </body>
 </html>
