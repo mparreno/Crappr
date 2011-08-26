@@ -3,6 +3,11 @@ var markers = [];
 
 window.onresize = trigger_resize;
 
+function trigger_resize() {
+	set_map_height_to($(document).height());
+	google.maps.event.trigger(map, 'resize');
+}
+
 //sets the correct height of the map
 //this should be called onload and onresize
 function set_map_height_to(viewportheight) {
@@ -16,11 +21,6 @@ function set_map_height_to(viewportheight) {
         $('#pana').height(mapHeight);
     }
 }
-
-function trigger_resize() {
-	set_map_height_to($(document).height());
-	google.maps.event.trigger(map, 'resize');
-} 
 
 
 function drawMap(minLng, minLat, maxLng, maxLat, mapType, zoomLevel) {
@@ -41,7 +41,6 @@ function drawMap(minLng, minLat, maxLng, maxLat, mapType, zoomLevel) {
     }
     
     map = new google.maps.Map(document.getElementById("map_div"), myOptions)
-    
 }
 
 function getInfoWindowTextForToilet(name, link) {
@@ -59,7 +58,7 @@ function addToiletMarker(name, latlng, link, icon) {
     google.maps.event.addListener(marker, 'click', function() { infowindow.open(map, marker); });
 }
 
-// Mathsssss
+//this should be used to face street view guy to a toilet
 function bearing_from(pana,point) 
 {
 	var lat2 = pana.lat(); 
@@ -80,12 +79,9 @@ function bearing_from(pana,point)
 	return brng;
 }
 
-function toRad(val){
-	return val * Math.PI / 180;
-}
-function toDeg(val){
-	return val * 180 / Math.PI;
-}
+function toRad(val){ return val * Math.PI / 180; }
+
+function toDeg(val){ return val * 180 / Math.PI; }
 
 function getIndex(){
 	$.ajax({
