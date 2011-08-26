@@ -9,7 +9,7 @@ class Toilet < ActiveRecord::Base
   # Needs: Lat, Long, Location
   
   # Scopes
-  scope :top, lambda { |limit|
+  scope :top_ids, lambda { |limit|
         joins(:ratings).
         select('toilets.id, AVG(ratings.value) AS average').
         group('toilets.id').
@@ -18,6 +18,13 @@ class Toilet < ActiveRecord::Base
     }
   
   # Class Methods
+  def self.top(num)
+    toilets = []
+    top_ids(num).each do |t|
+      toilets << find(t.id)
+    end
+    toilets
+  end
   
   # Instance Methods   
   def rating

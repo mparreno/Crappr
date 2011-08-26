@@ -1,8 +1,7 @@
 class IndexController < ApplicationController
+  respond_to :html
+  
   def index
-    @toilets = []
-    Toilet.top(10).each do |t|
-      @toilets << Toilet.find(t.id)
-    end
+    respond_with(@toilets = Toilet.top(10))
   end
 end
