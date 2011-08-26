@@ -2,18 +2,26 @@ require 'spec_helper'
 
 describe Toilet do
   before(:all) do
-    VALID_ATTRS = %w(name change_rm gender disabled suburb open_hours location lat lng)
-  end
-  describe "attributes" do
-    it "should have necessary attributes" do
-      VALID_ATTRS.each do |att|
-        Toilet.new.should respond_to(att)
-      end
-    end
-  end
   
-  describe "Class method - near" do
-    pending "Should find all toilets near a location"
+  end
+  describe "required attributes" do
+    before  { @toilet = Toilet.new }    
+    subject { @toilet }
+    
+    context "when normal toilet" do
+      it { should respond_to(:name) }
+      it { should respond_to(:change_rm) }
+      it { should respond_to(:disabled) }
+      it { should respond_to(:suburb) }
+      it { should respond_to(:open_hours) }
+      it { should respond_to(:location) }
+      it { should respond_to(:lat) }
+      it { should respond_to(:lng) }
+      it { should respond_to(:rating) }
+      it { should respond_to(:ratings) }
+      it { should respond_to(:to_param) }
+    end
+
   end
   
 end

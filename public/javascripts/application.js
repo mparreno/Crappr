@@ -59,7 +59,7 @@ function addToiletMarker(name, latlng, link, icon) {
     google.maps.event.addListener(marker, 'click', function() { infowindow.open(map, marker); });
 }
 
-
+// Mathsssss
 function bearing_from(pana,point) 
 {
 	var lat2 = pana.lat(); 
@@ -85,6 +85,18 @@ function toRad(val){
 }
 function toDeg(val){
 	return val * 180 / Math.PI;
+}
+
+function getIndex(){
+	$.ajax({
+		      beforeSend      : function(request) { request.setRequestHeader("Accept", "text/javascript"); },
+		      type            : 'GET',
+		      url             : '/toilets',
+			  success		  : function() { loadToilets(); 
+											 var mcOptions     = { gridSize: 50, maxZoom: 12 };
+											 var markerCluster = new MarkerClusterer(map, markers, mcOptions);
+											}
+		});
 }
 
 

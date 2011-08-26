@@ -13,7 +13,7 @@ module HasLocation
                               exclude_id = ""
                               
                               if (origin).is_a?(Array)
-                                origin_lat, origin_lng = origin
+                                origin_lat, origin_lng = origin[0].to_f, origin[1].to_f
                                 exclude_id = ""
                               else
                                 origin_lat, origin_lng = origin.lat, origin.lng

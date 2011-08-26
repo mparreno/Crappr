@@ -1,0 +1,18 @@
+<div id="information">
+	<h2>Top 10 Crapprs</h2>
+	<ol>
+		<%= render(:partial => 'toilet_li', :collection => @toilets) %>
+	</ol>
+</div>
+<div id="map_div"></div>
+
+<script type='text/javascript'>
+	
+    $(function()
+    {
+		set_map_height_to($(document).height());
+		drawMap(174.613088, -41.613483, 175.00124, -40.873161, google.maps.MapTypeId.TERRAIN, 11);
+		getIndex();
+    });
+
+</script>
