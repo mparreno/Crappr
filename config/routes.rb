@@ -6,8 +6,16 @@ Crappr::Application.routes.draw do
   end
   
   namespace :api do
-    get "nearby" => "toilets#nearby_crappers"
-    get "top10" => "toilets#top_10"
+    resources :toilets, :only => [:show, :index] do
+      post 'rate', :on => :member
+      get 'reviews', :on => :member
+      post 'reviews', :action => :create_review, :on => :member
+      get 'nearby', :on => :collection
+      get 'top_10', :on => :collection
+    end
+    
+    resources :reviews, :only => [:create] do
+    end
   end
   
   root :to => "index#index"
