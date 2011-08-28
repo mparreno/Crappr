@@ -2,7 +2,7 @@ class Toilet < ActiveRecord::Base
   include HasLocation
   
   # Associations
-  has_many :ratings
+  has_many :reviews
   belongs_to :suburb
   
   # Validations
@@ -10,8 +10,8 @@ class Toilet < ActiveRecord::Base
   
   # Scopes
   scope :top_ids, lambda { |limit|
-        joins(:ratings).
-        select('toilets.id, AVG(ratings.value) AS average').
+        joins(:reviews).
+        select('toilets.id, AVG(reviews.value) AS average').
         group('toilets.id').
         order('average desc').
         limit(limit)
@@ -28,7 +28,7 @@ class Toilet < ActiveRecord::Base
   
   # Instance Methods   
   def rating
-    ratings.average(:value).try(:round) 
+    reviews.average(:value).try(:round) 
   end   
                     
   def to_param

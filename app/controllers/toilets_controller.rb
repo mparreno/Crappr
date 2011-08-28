@@ -12,7 +12,7 @@ class ToiletsController < ApplicationController
   end
   
   def rate
-    @toilet.ratings.create :value => params[:rating]
+    @toilet.reviews.create :value => params[:rating]
   end
   
   private
