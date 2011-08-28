@@ -1,20 +1,22 @@
 class Api::ToiletsController < Api::BaseController
   
-  before_filter :load_toilet, :except => [:index, :top_10]
+  before_filter :load_toilet, :except => [:index, :top_10, :nearby]
   
   def index
     respond_with @toilets = Toilet.all
   end
 
   def show
-    respond_with @toilet, :methods => [ :rating ]
+    respond_with @toilet, :methods => [:rating]
   end
   
   def nearby
     range = params[:range] || 500
     limit = params[:limit] || 3
     @near_toilets = Toilet.near(:origin => [params[:lat], params[:lng]], :within => range).order("distance asc").limit(limit)
-    respond_with @near_toilets
+    # Dirty hack!! Found issue here: https://rails.lighthouseapp.com/projects/8994/tickets/4840-to_xml-doesnt-work-in-such-case-eventselecttitle-as-tto_xml
+    # TODO: fix later
+    respond_with @near_toilets, :except => [:distance], :methods => [:dist]
   end
   
   def top_10
@@ -27,11 +29,11 @@ class Api::ToiletsController < Api::BaseController
   end
   
   def create_review
-    # Whatver josh wants to call it
+    # Whatver josh wants to call them
     value = params[:rating]
     text = params[:comment]
-    @toilet.reviews.create :value => value, :text => text
-    respond_with @reviews = @toilet.reviews
+    @review = @toilet.reviews.create :value => value, :text => text
+    respond_with @review
   end
   
   private

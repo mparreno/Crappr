@@ -30,6 +30,12 @@ class Toilet < ActiveRecord::Base
   def rating
     reviews.average(:value).try(:round) 
   end   
+  
+  # Dirty hack!! Found issue here: https://rails.lighthouseapp.com/projects/8994/tickets/4840-to_xml-doesnt-work-in-such-case-eventselecttitle-as-tto_xml
+  # TODO: fix later
+  def dist
+    try(:distance) 
+  end
                     
   def to_param
     "#{self.id}-#{ActiveSupport::Inflector.transliterate(self.location).parameterize}"

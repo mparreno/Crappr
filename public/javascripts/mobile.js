@@ -6,7 +6,7 @@ function findNearestToilets(limit) {
         var lat = coords.latitude;
         var long = coords.longitude;
 				
-				$.getJSON('/api/nearby.json?lat=' + lat + '&lng=' + long + '&limit=' + limit, function(data) {
+				$.getJSON('/api/toilets/nearby.json?lat=' + lat + '&lng=' + long + '&limit=' + limit, function(data) {
 					 var items = [];
 
 					  $.each(data, function(key, val) {
