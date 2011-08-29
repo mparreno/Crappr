@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= h(yield(:title) || "Untitled") %></title>
+    <title><%= h(yield(:title) || "Crappr") %></title>
 	<%= stylesheet_link_tag 'mobile' %>
     <%= javascript_include_tag 'jquery', "mobile" %>
-	<meta name="viewport" content="width=320" />
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+	
+	<script>
+		// When ready...
+		window.addEventListener("load",function() {
+			// Set a timeout...
+			setTimeout(function(){
+				// Hide the address bar!
+				window.scrollTo(0, 1);
+			}, 0);
+		});
+	</script>
 
     <%= yield(:head) %>
   </head>

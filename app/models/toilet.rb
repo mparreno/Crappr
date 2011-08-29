@@ -37,7 +37,7 @@ class Toilet < ActiveRecord::Base
   # TODO: fix later
   def dist
     if try(:distance)
-      distanceize(distance)
+      distanceize(distance, "m", false)
     end
   end
                     
