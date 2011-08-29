@@ -10,7 +10,7 @@ function findNearestToilets(limit) {
 					 var items = [];
 
 					  $.each(data, function(key, val) {
-					    items.push('<li id="' + key + '">' + val.toilet.location + ' (' + val.toilet.distance + 'km away)</li>');
+					    items.push('<li id="' + key + '">' + val.toilet.location + ' (' + val.toilet.dist + 'km away)</li>');
 					  });
 
 					$('#toilets').html(  
@@ -19,7 +19,6 @@ function findNearestToilets(limit) {
 					    	html: items.join('')
 					  	})
 					);
-						
 
 				});
 				

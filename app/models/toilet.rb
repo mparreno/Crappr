@@ -1,5 +1,6 @@
 class Toilet < ActiveRecord::Base
   include HasLocation
+  include ToiletsHelper
   
   # Associations
   has_many :reviews
@@ -35,7 +36,9 @@ class Toilet < ActiveRecord::Base
   # Found issue here: https://rails.lighthouseapp.com/projects/8994/tickets/4840-to_xml-doesnt-work-in-such-case-eventselecttitle-as-tto_xml
   # TODO: fix later
   def dist
-    try(:distance) 
+    if try(:distance)
+      distanceize(distance)
+    end
   end
                     
   def to_param
