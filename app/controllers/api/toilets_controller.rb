@@ -14,7 +14,8 @@ class Api::ToiletsController < Api::BaseController
     range = params[:range] || 500
     limit = params[:limit] || 3
     @near_toilets = Toilet.near(:origin => [params[:lat], params[:lng]], :within => range).order("distance asc").limit(limit)
-    # Dirty hack!! Found issue here: https://rails.lighthouseapp.com/projects/8994/tickets/4840-to_xml-doesnt-work-in-such-case-eventselecttitle-as-tto_xml
+    # Dirty hack!! 
+    # Found issue here: https://rails.lighthouseapp.com/projects/8994/tickets/4840-to_xml-doesnt-work-in-such-case-eventselecttitle-as-tto_xml
     # TODO: fix later
     respond_with @near_toilets, :except => [:distance], :methods => [:dist]
   end
@@ -29,9 +30,8 @@ class Api::ToiletsController < Api::BaseController
   end
   
   def create_review
-    # Whatver josh wants to call them
-    value = params[:rating]
-    text = params[:comment]
+    value = params[:value]
+    text = params[:text]
     @review = @toilet.reviews.create :value => value, :text => text
     respond_with @review
   end

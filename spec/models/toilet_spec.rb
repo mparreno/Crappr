@@ -18,7 +18,7 @@ describe Toilet do
       it { should respond_to(:lat) }
       it { should respond_to(:lng) }
       it { should respond_to(:rating) }
-      it { should respond_to(:ratings) }
+      it { should respond_to(:reviews) }
       it { should respond_to(:to_param) }
     end
 
