@@ -4,6 +4,6 @@ class AddNameToReview < ActiveRecord::Migration
   end
 
   def self.down
-    remove_column :ratings, :name
+    remove_column :reviews, :name
   end
 end
