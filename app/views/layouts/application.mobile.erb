@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no" />
     <%= yield(:head) %>
   </head>
-  <body onLoad="setTimeout(scrollTo, 0, 0, 1)" >
+  <body>
 	<script>
 		window.addEventListener('load', function(){ 
 			var script = document.createElement('script');
@@ -16,6 +16,7 @@
 			var script = document.createElement('script');
 			script.src = '<%= javascript_path 'mobile' %>';
 			document.getElementsByTagName('head')[0].appendChild(script); 
+			
 			});
 	</script>
 	

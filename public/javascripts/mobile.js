@@ -1,3 +1,5 @@
+setTimeout(scrollTo, 0, 0, 1);
+
 $("#gps-btn").click(function() {
 	$("#toilets-homepage-container").show();
 	findNearestToilets(3);
