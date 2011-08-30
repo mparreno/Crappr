@@ -33,7 +33,11 @@ $(function()
 		<%= render :partial => 'ratings', :locals => {:toilet => @toilet } %>
 	</div>
 	<p><%= link_to 'Back to all', toilets_path %></p>
-	
+	<h3>Reviews:</h3>
+	<ul>
+		<%= render(:partial => 'reviews', :collection => @toilet.reviews) || 
+				"<li>Sorry this toilet has no review.</li>".html_safe %>
+	</ul>
 	<h3>Crapprs near here:</h3>
 	<ul>
           <%= render(:partial => 'near_toilet', :collection => @near_toilets) || 

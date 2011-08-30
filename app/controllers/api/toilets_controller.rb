@@ -3,7 +3,8 @@ class Api::ToiletsController < Api::BaseController
   before_filter :load_toilet, :except => [:index, :top_10, :nearby]
   
   def index
-    respond_with @toilets = Toilet.all
+    limit = params[:limit] || nil
+    respond_with @toilets = Toilet.limit(limit)
   end
 
   def show
@@ -32,7 +33,9 @@ class Api::ToiletsController < Api::BaseController
   def create_review
     value = params[:value]
     text = params[:text]
-    @review = @toilet.reviews.create :value => value, :text => text
+    name = params[:name]
+    
+    @review = @toilet.reviews.create :value => value, :text => text, :name => name
     respond_with @review
   end
   
