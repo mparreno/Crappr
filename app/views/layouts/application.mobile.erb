@@ -3,31 +3,32 @@
   <head>
     <title><%= h(yield(:title) || "Crappr") %></title>
 	<%= stylesheet_link_tag 'mobile' %>
-    <%= javascript_include_tag 'jquery', "mobile" %>
 	<meta name="viewport" content="width=device-width, user-scalable=no" />
-	
-	<script>
-		// When ready...
-		window.addEventListener("load",function() {
-			// Set a timeout...
-			setTimeout(function(){
-				// Hide the address bar!
-				window.scrollTo(0, 1);
-			}, 0);
-		});
-	</script>
-
     <%= yield(:head) %>
   </head>
-  <body>
+  <body onLoad="setTimeout(scrollTo, 0, 0, 1)" >
+	<script>
+		window.addEventListener('load', function(){ 
+			var script = document.createElement('script');
+			script.src = '<%= javascript_path 'jquery' %>';
+			document.getElementsByTagName('head')[0].appendChild(script);
+			
+			var script = document.createElement('script');
+			script.src = '<%= javascript_path 'mobile' %>';
+			document.getElementsByTagName('head')[0].appendChild(script); 
+			});
+	</script>
+	
 	<div id="header"> 
 		<%= yield :header %>
-		<h1><a href="/">Crappr</a></h1> 
-		<h2>.. on a Smartphone!</h2>
 	</div>
 
 	<div id="content">
 		<%= yield %>
+	</div>
+	
+	<div id="footer">
+		<%= yield :footer %>
 	</div>
   </body>
 </html>

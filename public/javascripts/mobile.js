@@ -1,3 +1,9 @@
+$("#gps-btn").click(function() {
+	$("#toilets-homepage-container").show();
+	findNearestToilets(3);
+	return false;
+});
+
 function findNearestToilets(limit) {
   $('#toilets').html("Loading some crapprs...");
    if (gps_capable()) {
@@ -8,9 +14,12 @@ function findNearestToilets(limit) {
 				
 				$.getJSON('/api/toilets/nearby.json?lat=' + lat + '&lng=' + long + '&limit=' + limit, function(data) {
 					 var items = [];
-
+					
 					  $.each(data, function(key, val) {
-					    items.push('<li id="' + key + '">' + val.toilet.location + ' (' + val.toilet.dist + 'm away)</li>');
+					    items.push('<li id="' + key + '">' + 
+									val.toilet.location + 
+									' (' +
+									val.toilet.dist + 'm away)</li>');
 					  });
 
 					$('#toilets').html(  
@@ -19,6 +28,7 @@ function findNearestToilets(limit) {
 					    	html: items.join('')
 					  	})
 					);
+					$('<h2>Toilets:</h2>').prependTo('#toilets');
 
 				});
 				
@@ -69,3 +79,4 @@ function getLocation(successCallback, errorCallback) {
     errorCallback();
   }
 }
+

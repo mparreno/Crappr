@@ -1,0 +1,33 @@
+<% content_for :header do %>
+	<h1><a href="/">Crappr</a></h1>
+<% end %>
+
+  <div id="tabsbar" class="tabsbar">
+      <div class="tab t1">
+          <a id="DetailsTab" href="#details" target="_tab">
+				Details
+          </a>
+      </div>
+      <div class="tab centertab t2">
+          <a id="mapTab" href="#map" target="_tab">
+          	Map
+          </a>
+      </div>
+      <div class="tab righttab t3">
+          <a id="streetTab" href="#street" target="_tab">
+				StreetView
+          </a>
+      </div>
+  </div>
+
+<div id="main-content">
+	<h2>
+		<%= @toilet.location.html_safe %>
+	</h2>
+	<p><strong>Opening Hours:</strong> <%= @toilet.open_hours.html_safe %></p>
+	<p><strong>Gender:</strong> <%= @toilet.gender.html_safe %></p>
+	<p><strong>Changing Room?:</strong> <%= (@toilet.change_rm) ? "Yes" : "No" %></p>
+	<p><strong>Disabled?:</strong> <%= (@toilet.disabled) ? "Yes" : "No" %></p>
+
+	<p><%= link_to 'Back to all', toilets_path %></p>
+</div>

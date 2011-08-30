@@ -1,14 +1,26 @@
-<a href="" class="button">Find A Crappr</a>
+<% content_for :header do %>
+	<div  class="homepage">
+		<h1><a href="/">Crappr</a></h1> 
+		<h2>Find a Crapper Near You</h2>
+	</div>
+<% end %>
 
-<h2>Toilets: </h2>
-<div id='toilets'>
+<div class="home">
+
+	<button id='gps-btn' class="button home-btn">USE GPS</button>
+	<h3>- OR -</h3>
+
+	<%= link_to "BROWSE ALL", toilets_url, :class => "button home-btn" %>
+	<div id="toilets-homepage-container" style="display:none;">
+		<div id='toilets'>
+		</div>
+	</div>
+	
 </div>
 
-<%= link_to "Full Site", root_url(:mobile => 0), :rel => "external" %>
 
-<script type='text/javascript'>
-		$(".button").click(function() {
-			findNearestToilets(3);
-			return false;
-		});  
-</script>
+<% content_for :footer do %>
+	<div  class="homepage-footer">
+		<%= link_to "Full Site", root_url(:mobile => 0), :rel => "external" %>
+	</div>
+<% end %>
