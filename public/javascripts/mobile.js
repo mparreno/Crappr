@@ -1,10 +1,14 @@
-setTimeout(scrollTo, 0, 0, 1);
+
 
 $("#gps-btn").click(function() {
 	$("#toilets-homepage-container").show();
 	findNearestToilets(3);
 	return false;
 });
+
+function scrollToHide(){
+	setTimeout(scrollTo, 0, 0, 1);
+}
 
 function findNearestToilets(limit) {
   $('#toilets').html("Loading some crapprs...");
