@@ -1,18 +1,39 @@
-<div id="information">
-	<h2>Top 10 Crapprs</h2>
+<% content_for :header do %>
+	<%= render(:partial => 'headers/main') %>
+<% end %>
+
+<section id="top-10">
+  <div class="page-header">
+    <h1>Top 10 Crapprs <small>As voted by you!</small></h1>
+  </div>
+  
+  <div id="information">
+	<h2></h2>
 	<ol>
 		<%= render(:partial => 'toilet_li', :collection => @toilets) %>
 	</ol>
-</div>
-<div id="map_div"></div>
+  </div>
+  <div id="map_div" class="top-10"></div>
+</section>
 
 <script type='text/javascript'>
 	
     $(function()
     {
-		set_map_height_to($(document).height());
+		set_map_height_to(500);
 		drawMap(174.613088, -41.613483, 175.00124, -40.873161, google.maps.MapTypeId.TERRAIN, 11);
-		getIndex();
+		getMarkersFor('/api/toilets/top_10.json');
     });
 
 </script>
+
+<% content_for :footer do %>
+
+  <div class="inner">
+	<div class="container">
+		<p>
+        	Designed and built with all the love in the world by me :)
+		</p>
+  </div>
+</div>
+<% end %>

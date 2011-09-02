@@ -42,8 +42,21 @@ $(function()
 		(<%= @toilet.reviews.count %> ratings)
 	</div>
 	<p><%= link_to 'Back to all', toilets_path %></p>
+<<<<<<< HEAD
+	<h3>Reviews:</h3>
+	<ul>
+		<%= render(:partial => 'reviews', :collection => @toilet.reviews) || 
+				"<li>Sorry this toilet has no review.</li>".html_safe %>
+	</ul>
+	<h3>Crapprs near here:</h3>
+	<ul>
+          <%= render(:partial => 'near_toilet', :collection => @near_toilets) || 
+				"<li>Sorry, there are no toilets near here. This Crappr might just have to do!</li>".html_safe %>
+    </ul>
+=======
 	
 
+>>>>>>> HEAPS AND HEAPS of changes!
 </div>
 <div id="map_div" class="show"></div>
 <div id="pana" class="show"></div>

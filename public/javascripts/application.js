@@ -1,7 +1,7 @@
 var map;
 var markers = [];
 
-window.onresize = trigger_resize;
+//window.onresize = trigger_resize;
 
 function trigger_resize() {
 	set_map_height_to($(document).height());
@@ -93,6 +93,25 @@ function getIndex(){
 											 var markerCluster = new MarkerClusterer(map, markers, mcOptions);
 											}
 		});
+}
+
+function getMarkersFor(url){
+	$.getJSON(url, function(data) {
+	
+		$.each(data, function(key, val) {
+					val.toilet.location + 
+					addToiletMarker(val.toilet.location, 
+						new google.maps.LatLng(val.toilet.lat,val.toilet.lng), 
+						"<a href='/toilets/"+val.toilet.to_param+"'>View more information</a>", 
+						"toilet.png"
+						);
+	  	});
+		
+			var mcOptions     = { gridSize: 50, maxZoom: 12 };
+			var markerCluster = new MarkerClusterer(map, markers, mcOptions);
+	
+	});
+	
 }
 
 

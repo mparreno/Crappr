@@ -1,6 +1,6 @@
 Crappr::Application.routes.draw do
-  resources :suburbs
-  
+  resources :suburbs, :only => [:show, :index]
+  resources :reviews, :only => [:create]
   resources :toilets, :only => [:show, :index] do
     post 'rate', :on => :member
   end
@@ -18,6 +18,7 @@ Crappr::Application.routes.draw do
     end
   end
   
+  match "about" => "index#about"
   root :to => "index#index"
   
 end

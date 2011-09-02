@@ -42,7 +42,10 @@ body{
 	font-size: 1.25em;
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> HEAPS AND HEAPS of changes!
 /***********
  * HOME CONTENT *
  ***********/
@@ -78,6 +81,7 @@ body{
 	text-shadow:
 		0px -1px 0px rgba(000,000,000,1),
 		0px 1px 0px rgba(255,255,255,0.3);
+<<<<<<< HEAD
 }
 
 #content a.button {
@@ -123,6 +127,53 @@ body{
 	text-align: center;
 }
 
+=======
+}
+
+#content a.button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 10px 20px;
+	background: -moz-linear-gradient(
+		top,
+		#42aaff 0%,
+		#003366);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#42aaff),
+		to(#003366));
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border: 1px solid #003366;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.5);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.5);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,1),
+		0px 1px 0px rgba(255,255,255,0.3);
+		width: 125px;
+		height: 23px;
+		text-align: center;
+		text-decoration: none;
+}
+
+#content .home-btn	{
+	display: block;
+	height: 43px;
+	margin: 0px auto 0.875em;
+	width: 167px;
+}
+
+#content .home h3{
+	text-align: center;
+}
+
+>>>>>>> HEAPS AND HEAPS of changes!
 /***********
  * HOME FOOTER *
  ***********/
@@ -157,6 +208,7 @@ body{
      position: absolute;
      text-align: center;
      background: url(/static/images/iphone/tabbg.png) repeat-x;
+<<<<<<< HEAD
  }
 
 
@@ -166,14 +218,32 @@ body{
      color: #1f75cc;
  }
 
+=======
+ }
+
+
+ .tab > a {
+     display: block;
+     font-weight: 700;
+     color: #1f75cc;
+ }
+
+>>>>>>> HEAPS AND HEAPS of changes!
  .tab > a[selected="curTab"] {
      background: #fff;
      color: #555;
      border-bottom: 1px solid #fff;
+<<<<<<< HEAD
  }
  .tab.t1 { 
      left: 3px;
  }
+=======
+ }
+ .tab.t1 { 
+     left: 3px;
+ }
+>>>>>>> HEAPS AND HEAPS of changes!
  .tab.t2 {
      left: 34.25%;
  }

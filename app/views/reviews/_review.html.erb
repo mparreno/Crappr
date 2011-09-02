@@ -1,0 +1,8 @@
+<p>
+   <strong>Name:</strong> <%= review.name || "Awww. Internets Shy" %><br />
+   <strong>Text:</strong> <%= review.text || "Awww. Internets Shy"%><br />
+   <strong>Rating:</strong>
+</p>
+<%= render :partial => 'reviews/rating', :locals => {:review => review } %>
+
+<hr />

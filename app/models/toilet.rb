@@ -4,7 +4,7 @@ class Toilet < ActiveRecord::Base
   
   # Associations
   has_many :reviews
-  belongs_to :suburb
+  belongs_to :suburbs
   
   # Validations
   # Needs: Lat, Long, Location

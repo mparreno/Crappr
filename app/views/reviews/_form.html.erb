@@ -1,0 +1,30 @@
+<% form_for review do |f| %>
+  <fieldset>
+  <legend>Write a Review:</legend>
+  <%= f.hidden_field :toilet_id %>
+  <div class="clearfix">
+    <%= f.label :name %>
+    <div class="input"><%= f.text_field :name %></div>
+  </div>
+  <div class="clearfix">
+    <%= f.label :text, "Review" %>
+    <div class="input"><%= f.text_area :text, :rows => 8 %></div>
+  </div>
+  <div class="clearfix">
+    <%= f.label :value, "Rating" %>
+    <div class="input">
+		<ul class="radio-rating">
+			<% (1..5).each do |i| %>
+				<li>
+					<%= "#{i}" %> <%= f.radio_button :value, i %>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+  </div>
+	
+  <div class="actions">
+    <button type="submit" class="btn primary">Add Review</button>
+   </div>
+</fieldset>
+<% end %>

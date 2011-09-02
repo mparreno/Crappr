@@ -3,6 +3,7 @@ class Review < ActiveRecord::Base
   belongs_to :toilet
   
   # Validations
-  # Needs: toilet_id, Value
+  validates_presence_of :text, :value
+  
   # Value needs to be a number
 end
