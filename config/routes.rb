@@ -16,6 +16,10 @@ Crappr::Application.routes.draw do
     
     resources :reviews, :only => [:create] do
     end
+    
+    resources :suburbs do
+      get 'toilets', :on => :member
+    end
   end
   
   match "about" => "index#about"

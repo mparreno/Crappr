@@ -1,0 +1,8 @@
+<ul class="star-rating">
+	<% (1..5).each do |i| %>
+		<li>
+			<span class="<%="stars-#{i} #{ "current-rating" if i == toilet.rating }" %>"></span>
+		</li>
+	<% end %>
+</ul>
+(<%= toilet.reviews.count %> ratings)

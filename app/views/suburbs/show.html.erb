@@ -1,0 +1,44 @@
+<script type='text/javascript'>	
+    $(function()
+    {
+		set_map_height_to(600);
+		drawMap(174.613088, -41.613483, 175.00124, -40.873161, google.maps.MapTypeId.TERRAIN, 11);
+		getMarkersFor('/api/toilets.json');
+    });
+</script>
+<section id="top-10">
+  <div class="page-header">
+    <h1><%= @suburb.name %>: <small>Click a marker or a cluster!</small></h1>
+  </div>
+
+  <div class="row show-grid">
+    <div class="span11 columns"><div id="map_div"></div></div>
+	<div class="span5 columns">
+		<table id="legend">
+		        <thead>
+		          <tr>
+		            <th colspan=2>Legend</th>
+		          </tr>
+		        </thead>
+		        <tbody>
+		          <tr>
+		            <td class="icon"><%= image_tag 'toilet.png', :class => "legend-icon" %></td>
+		            <td><strong>Toilet Marker:</strong> Click for more information </td>
+
+		          </tr>
+		          <tr>
+		            <td><%= image_tag 'm1.png', :class => "legend-cluster" %></td>
+		            <td><strong>Small cluster of toiets:</strong> Click to zoom in</td>
+		          </tr>
+		          <tr>
+		            <td><%= image_tag 'm2.png', :class => "legend-cluster" %></td>
+		            <td><strong>Medium cluster of toiets:</strong> Click to zoom in</td>
+		          </tr>
+		        </tbody>
+		      </table>
+	</div>
+  </div>
+  	
+
+  		
+</section>

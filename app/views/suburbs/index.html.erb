@@ -1,5 +1,10 @@
-<ul>
-<% @suburbs.each do |suburb| %>
-	<li><%= suburb.name %></li>
-<% end %>
-</ul>
+<section id="toilet">
+  <div class="page-header">
+    <h1>Browse by Suburb:</h1>
+  </div>
+  <ul>
+	<% @suburbs.each do |suburb| %>
+		<li><%= link_to suburb.name, suburb_path(suburb) %></li>
+		<% end %>
+  </ul>
+</section>

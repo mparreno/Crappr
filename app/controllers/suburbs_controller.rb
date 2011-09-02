@@ -7,7 +7,13 @@ class SuburbsController < ApplicationController
   end
 
   def show
-    
+    respond_with @suburb
+  end
+  
+  private
+  
+  def load_suburb
+    @suburb = Suburb.find(params[:id])
   end
   
 end

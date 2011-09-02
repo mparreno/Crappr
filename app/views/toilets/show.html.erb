@@ -31,15 +31,8 @@ $(function()
 	<p><strong>Changing Room?:</strong> <%= (@toilet.change_rm) ? "Yes" : "No" %></p>
 	<p><strong>Disabled?:</strong> <%= (@toilet.disabled) ? "Yes" : "No" %></p>
 	<p><strong>Rating:</strong></p>
-	<div id="ratings">
-		<ul class="star-rating">
-			<% (1..5).each do |i| %>
-				<li>
-					<span class="<%="stars-#{i} #{ "current-rating" if i == @toilet.rating }" %>"></span>
-				</li>
-			<% end %>
-		</ul>
-		(<%= @toilet.reviews.count %> ratings)
+	<div id="info-rating">
+		<%= render :partial => 'rating', :locals => {:toilet =>@toilet } %>
 	</div>
 	<p><%= link_to 'Back to all', toilets_path %></p>
 	
@@ -66,7 +59,7 @@ $(function()
   <div class="page-header">
     <h1>Reviews:</h1>
   </div>
-	<div id="reviews">
+	<div id="reviews-list">
 		<%= render(:partial => 'reviews/review', :collection => @toilet.reviews.compact) || 
 				"<li>Sorry this toilet has no reviews.</li>".html_safe %>
 	</div>
