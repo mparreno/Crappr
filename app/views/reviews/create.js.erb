@@ -1,4 +1,4 @@
-<% if @suburb %>
+<% if @review.valid? %>
 $("#reviews-list").append("<%= escape_javascript(render(:partial => @review)) %>");
 $("#info-rating").html("<%= escape_javascript(render :partial => 'toilets/rating', :locals => {:toilet => @review.toilet }) %>");
 $("#reviews-alerts").append("<%= escape_javascript(render(:partial => 'shared/success', :locals => {:message => flash[:notice] })) %>");

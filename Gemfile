@@ -4,6 +4,7 @@ gem 'rails', '3.0.10'
 gem 'pg'
 gem 'jquery-rails'
 gem 'hpricot'
+gem 'will_paginate', '~> 3.0.0'
 
 group :development, :test do
    gem 'spork', '~> 0.9.0.rc'

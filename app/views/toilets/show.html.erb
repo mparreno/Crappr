@@ -34,9 +34,11 @@
     <h1>Reviews:</h1>
   </div>
   <div id="reviews-list">
-  	<%= render(:partial => 'reviews/review', :collection => @toilet.reviews.compact) || 
+  	<%= render(:partial => 'reviews/review', :collection => @reviews.compact) || 
   			"<li>Sorry this toilet has no reviews.</li>".html_safe %>
   </div>
+
+  <%= will_paginate @reviews %>
 	
   <div id="reviews-alerts"></div>
   <%= render :partial => 'reviews/form', :locals => {:review => Review.new(:toilet => @toilet) } %>

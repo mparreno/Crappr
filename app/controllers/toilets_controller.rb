@@ -12,6 +12,7 @@ class ToiletsController < ApplicationController
 
   def show
     @near_toilets = Toilet.near(:origin => @toilet, :within => 0.5).order("distance asc")
+    @reviews = @toilet.reviews.order('created_at desc').paginate(:page => params[:page], :per_page => 5)
     respond_to do |format|
       format.mobile { render :template => 'toilets/mobile/show' }
       format.all
