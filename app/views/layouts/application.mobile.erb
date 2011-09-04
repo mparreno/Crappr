@@ -3,7 +3,7 @@
   <head>
     <title><%= h(yield(:title) || "Crappr") %></title>
 	<%= javascript_include_tag 'load-min' %>
-	<%= stylesheet_link_tag 'mobile' %>
+	<%= stylesheet_link_tag 'bootstrap-1.1.1.min', 'mobile' %>
 	<meta name="viewport" content="width=device-width, user-scalable=no" />
     <%= yield(:head) %>
   </head>

@@ -18,7 +18,7 @@ class Api::ToiletsController < Api::BaseController
     # Dirty hack!! 
     # Found issue here: https://rails.lighthouseapp.com/projects/8994/tickets/4840-to_xml-doesnt-work-in-such-case-eventselecttitle-as-tto_xml
     # TODO: fix later
-    respond_with @near_toilets, :except => [:distance], :methods => [:dist]
+    respond_with @near_toilets, :except => [:distance], :methods => [:dist, :to_param, :rating]
   end
   
   def top_10

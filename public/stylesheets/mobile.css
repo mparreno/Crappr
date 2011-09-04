@@ -3,8 +3,6 @@ body{
   font-family:Helvetica, Arial, Verdana, sans-serif;
   padding:0px;
 	margin:0px;
-	background: #f2f3f3 url(/images/body-bg.gif) repeat;
-	color: #464646;
 	font-size: 100%;
 	line-height: 1.125em;
 }
@@ -13,8 +11,8 @@ body{
 	text-align: left;
 	color: white;
 	background: #b21418;
-	background: -moz-linear-gradient(100% 100% 90deg, #003366, #42aaff);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#42aaff), to(#003366));
+	background: -moz-linear-gradient(100% 100% 90deg, #42aaff, #003366);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#003366), to(#42aaff));
 	padding: .825em 2%;
 }
 #header  a {
@@ -24,22 +22,22 @@ body{
 }
 	#header .homepage {
 			text-align: center;
-			
 	}
 	
 	#header .homepage h1  {
 		font-size: 2em;
 		margin: 0.575em 0px 0px;
+		color: white;
 	}
 	
 	#header h1  {
-		
 		margin: 0px 0px 0px;
 	}
 
 
 #header h2 {
 	font-size: 1.25em;
+	color: white;
 }
 
 

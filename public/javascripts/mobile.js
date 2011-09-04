@@ -23,8 +23,9 @@ function findNearestToilets(limit) {
 					
 					  $.each(data, function(key, val) {
 					    items.push('<li id="' + key + '">' + 
+									'<a href="/toilets/'+ val.toilet.to_param + '">' +
 									val.toilet.location + 
-									' (' +
+									'</a> (' +
 									val.toilet.dist + 'm away)</li>');
 					  });
 
@@ -47,7 +48,11 @@ function findNearestToilets(limit) {
   }
 }
 
-function toiletLink(toilet){
+function toiletLink(toilets){
+	
+}
+
+function toiletsToLI(){
 	
 }
 
