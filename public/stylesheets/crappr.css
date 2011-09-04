@@ -1,17 +1,14 @@
 html{
 		height:100%;
-} 	background: #f2f3f3 url(/images/body-bg.gif) repeat;
-
+}
 body {
 		min-height:100%;
-		background: #f2f3f3 url(/images/body-bg.gif) repeat;font-family: 'Trebuchet MS', 'Trebuchet MS', sans-serif;
+		font-family: 'Trebuchet MS', 'Trebuchet MS', sans-serif;
 }
-
 #container {
    min-height:100%;
    position:relative;
 }
-
 #header {
 	padding-top: 40px;
 }
@@ -20,7 +17,6 @@ body {
   bottom: 0;
   left:0;
   right:0;
-
 }
 
 #content {
@@ -68,21 +64,19 @@ body {
 }
 
 section {
-	padding-top: 60px;
+	padding-top: 30px;
 	position: relative;
+	padding-bottom: 30px;
 }
 
 #footer {
 margin-top: 80px;
 }
 
-.clear {
-	clear:both;
-}
+.clear { clear:both; }
 
-section#top-10 {
-	height:550px;
-}
+section#top-10 { height:550px;}
+section#about { height:400px;}
 
 #legend img.legend-toilet { width:40px; }
 #legend img.legend-cluster { width:45px; }
