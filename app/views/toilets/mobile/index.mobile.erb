@@ -2,8 +2,80 @@
 	<h1><a href="/">Crappr</a></h1>
 <% end %>
 
+<% content_for :after_load do %>
+loadTop10();
+
+$(".tabs li").click(function() { 
+	$(".tabs li").removeClass('active');
+	$(this).addClass('active');
+	
+	$("section#toilets div").not('.page-header').hide();
+	
+	var funct = $(this).children('a').attr('data-function');
+	window[funct]();
+	return false;
+});
+<% end %>
+
+
 <ul class="tabs">
-  <li class="active"><a href="#">Top 10</a></li>
-  <li><a href="#">Toilets</a></li>
-  <li><a href="#">Suburbs</a></li>
+  <li class="active"><a href="" id="top-10-link" data-function='loadTop10'>Top 10</a></li>
+  <li><a href="" id="index-link" data-function='loadIndex'>Toilets</a></li>
+  <li><a href="" id="index-link" data-function='loadSearch'>Search</a></li>
 </ul>
+<section id="toilets">
+	<div class="page-header">
+    	<h2></h2>
+    </div>
+	<div id="top10" class="" style='display:none;'></div>
+	<div id="index" class="" style='display:none;'></div>
+</section>
+
+<script>
+
+function loadTop10(){
+	$("#top10").show();
+	$('.page-header h2').html('Top 10 Toilets:');
+	$.getJSON('/api/toilets/top_10.json', function(data) {
+		items = [];
+		$.each(data, function(key, val) {
+	    items.push('<li id="' + key + '">' + 
+					'<a href="/toilets/'+ val.toilet.to_param + '">' +
+					val.toilet.location + 
+					'</a></li>');
+	  });
+
+	$('#top10').html(  
+		$('<ul/>', {
+	    	'class': 'my-new-list',
+	    	html: items.join('')
+	  	})
+	);
+	});
+}
+function loadIndex(){
+	$("#index").show();
+	$('.page-header h2').html('All Toilets:');
+	$.getJSON('/api/toilets.json?limit=5', function(data) {
+		items = [];
+		$.each(data, function(key, val) {
+	    items.push('<li id="' + key + '">' + 
+					'<a href="/toilets/'+ val.toilet.to_param + '">' +
+					val.toilet.location + 
+					'</a></li>');
+	  });
+
+	$('#index').html(  
+		$('<ul/>', {
+	    	'class': 'my-new-list',
+	    	html: items.join('')
+	  	})
+	);
+	
+	});
+}
+function loadSearch(){
+	$('.page-header h2').html('Search Toilets:');
+}
+
+</script>

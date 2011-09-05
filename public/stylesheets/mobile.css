@@ -135,67 +135,65 @@ body{
 	#footer .homepage-footer a {
 		color: white;
 	}
-
-
-
+	
 /***********
- * TABSBAR *
+ * Tab pages *
  ***********/
 
- .tabsbar {
-     height: 30px;
-     width: 100%;
-     line-height: 30px;
-     font-size: 10.5pt;
- }
-
- .tab {
-     height: 29px;
-     width: 32%;
-     position: absolute;
-     text-align: center;
-     background: url(/static/images/iphone/tabbg.png) repeat-x;
- }
-
-
- .tab > a {
-     display: block;
-     font-weight: 700;
-     color: #1f75cc;
- }
-
- .tab > a[selected="curTab"] {
-     background: #fff;
-     color: #555;
-     border-bottom: 1px solid #fff;
- }
- .tab.t1 { 
-     left: 3px;
- }
- .tab.t2 {
-     left: 34.25%;
- }
-
- .tab.t3 {
-     right: 3px;
- }
-.tab-img {
-    border: 0; 
-    margin-right: 4px; 
-    margin-bottom: -3px; 
-}
-.tab-left-corner {
-    position: absolute; 
-    top: -1px;
-    left: -1px; 
-    border: 0; 
-
+section#toilet h2 {
+	font-size: 18px;
+	line-height: 22px;
+	text-align:center;
 }
 
-.tab-right-corner {
-    position: absolute; 
-    top: -1px;
-    right: -1px; 
-    border: 0; 
-
+section p {
+	font-size: 15px;
+	line-height: 19px;
 }
+section {
+	padding:0 10px;
+	min-height:300px;
+}
+
+.toilet_info { max-width:250px; }
+.toilet_info h4 { line-height: 26px; }
+
+/***********
+ * Stars *
+ ***********/
+
+.star-rating, .star-rating .current-rating, .star-rating span
+{ background: url('/images/star.png') left -1000px repeat-x; }
+.star-rating{
+	position:relative;
+	width:125px;
+	height:25px;
+	overflow:hidden;
+	list-style:none;
+	margin:0;
+	padding:0;
+	background-position: left top;
+}
+.star-rating li { display: inline; }
+.star-rating .current-rating{
+	position:absolute;
+	top:0;
+	left:0;
+	text-indent:-1000em;
+	height:25px;
+	line-height:25px;
+	outline:none;
+	overflow:hidden;
+	border: none;
+}
+.star-rating span.stars-1{ width:20%; z-index:6; }
+.star-rating span.stars-2{ width:40%; z-index:5; }
+.star-rating span.stars-3{ width:60%; z-index:4; }
+.star-rating span.stars-4{ width:80%; z-index:3; }
+.star-rating span.stars-5{ width:100%; z-index:2; }
+.star-rating .current-rating{ z-index:1; background-position: left center; }
+
+.clear { clear:both; }
+.left { float:left; }
+.right { float:right; }
+

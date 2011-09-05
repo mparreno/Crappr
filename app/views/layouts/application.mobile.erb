@@ -12,6 +12,7 @@
 		window.addEventListener('load', function(){ 
 			load('<%= javascript_path 'jquery.min' %>').then('<%= javascript_path 'mobile' %>').thenRun(function () {
 			    setTimeout(scrollTo, 0, 0, 1);
+				<%= yield(:after_load) %>
 			});
 		});
 	</script>

@@ -7,7 +7,7 @@
 	<p><strong>Gender:</strong> <%= @toilet.gender.html_safe %></p>
 	<p><strong>Changing Room?:</strong> <%= (@toilet.change_rm) ? "Yes" : "No" %></p>
 	<p><strong>Disabled?:</strong> <%= (@toilet.disabled) ? "Yes" : "No" %></p>
-	<p><strong>Rating:</strong></p>
+	<p class="left"><strong>Rating:</strong></p>
 	<div id="info-rating">
 		<%= render :partial => 'rating', :locals => {:toilet =>@toilet } %>
 	</div>

@@ -2,20 +2,115 @@
 	<h1><a href="/">Crappr</a></h1>
 <% end %>
 
+<% content_for :after_load do %>
+$(".tabs li").click(function() { 
+	$(".tabs li").removeClass('active');
+	$(this).addClass('active');
+	
+	$("section#toilet div").not('.page-header').hide();
+	
+	var funct = $(this).children('a').attr('data-function');
+	window[funct]();
+	return false;
+});
+<% end %>
+
 <ul class="tabs">
-  <li class="active"><a href="#">Details</a></li>
-  <li><a href="#">Map</a></li>
-  <li><a href="#">StreetView</a></li>
+  <li class="active"><a href="" data-function='loadDetails'>Info</a></li>
+  <li><a href="" data-function='loadMap'>Map</a></li>
+  <li><a href="" data-function='loadStreet'>StreetView</a></li>
+  <li><a href="" data-function='loadReviews'>Review</a></li>
 </ul>
 
-<div id="main-content">
-	<h2>
-		<%= @toilet.location.html_safe %>
-	</h2>
-	<p><strong>Opening Hours:</strong> <%= @toilet.open_hours.html_safe %></p>
-	<p><strong>Gender:</strong> <%= @toilet.gender.html_safe %></p>
-	<p><strong>Changing Room?:</strong> <%= (@toilet.change_rm) ? "Yes" : "No" %></p>
-	<p><strong>Disabled?:</strong> <%= (@toilet.disabled) ? "Yes" : "No" %></p>
+<section id="toilet">
+  <div class="page-header">
+    <h2><%= @toilet.location.html_safe %></h2>
+  </div>
+  <div id="info">
+  	<p><strong>Opening Hours:</strong> <%= @toilet.open_hours.html_safe %></p>
+  	<p><strong>Gender:</strong> <%= @toilet.gender.html_safe %></p>
+  	<p><strong>Changing Room?:</strong> <%= (@toilet.change_rm) ? "Yes" : "No" %></p>
+  	<p><strong>Disabled?:</strong> <%= (@toilet.disabled) ? "Yes" : "No" %></p>
+	<p class="left"><strong>Rating:</strong></p>
+		<ul class="star-rating left">
+		<% (1..5).each do |i| %>
+			<li>
+				<span class="<%="stars-#{i} #{ "current-rating" if i == @toilet.rating }" %>"></span>
+			</li>
+		<% end %>
+	</ul>
+	<p class="small">(<%= @toilet.reviews.count %> ratings)</p>
+    <div class="clear"></div>
+  	<p><%= link_to 'Back to all', toilets_path %></p>
+  </div>
+  <div id="map_div" class="" style='display:none;'>Google Maps</div>
+  <div id="pana" class="" style='display:none;'>Google StreetView</div>
+  <div id="reviews" class="" style='display:none;'>Reviews</div>
+</section>
 
-	<p><%= link_to 'Back to all', toilets_path %></p>
-</div>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script>
+
+
+function loadDetails(){
+  $("#info").show();
+}
+
+function loadReviews(){
+  $("#reviews").show();
+}
+function loadMap(){
+  $("#map_div").show();
+  set_map_height_to(250);
+  var Latlng = new google.maps.LatLng(<%= @toilet.lat %>,<%= @toilet.lng %>);
+  drawMap(Latlng, google.maps.MapTypeId.ROADMAP, 1);
+  var marker = new google.maps.Marker({ position: Latlng, map: map, title: name,icon: '/images/toilet.png' });
+  markers.push(marker);
+  map.setCenter(Latlng);
+  map.setZoom(18);
+}
+
+function loadStreet(){
+  $("#pana").show();
+  set_map_height_to(250);
+  var webService = new google.maps.StreetViewService();  
+  var Latlng = new google.maps.LatLng(<%= @toilet.lat %>,<%= @toilet.lng %>);
+  var checkaround = 50;
+  webService.getPanoramaByLocation(Latlng,checkaround,checkNearestStreetView);
+}
+
+function checkNearestStreetView(panoData){ 
+  var Latlng = new google.maps.LatLng(<%= @toilet.lat %>,<%= @toilet.lng %>);
+  if(panoData){
+       if(panoData.location){
+          if(panoData.location.latLng){
+             	var panoramaOptions = {
+  			  position: panoData.location.latLng, 
+  			  pov: {
+  			    heading: bearing_from(panoData.location.latLng, Latlng),
+  			    pitch: -2,
+  			    zoom: 1
+  			  }
+  			};
+  			
+  			var panorama = new  google.maps.StreetViewPanorama(document.getElementById("pana"), panoramaOptions);
+  			drawMap(Latlng, google.maps.MapTypeId.SATELLITE, 11);
+  			map.setStreetView(panorama);
+  			map.setCenter(Latlng);
+  			map.setZoom(12);
+          }
+      }
+  }
+  else 
+  {
+	alert("Sorry, Google StreetView is unavailable for this Crappr.")
+	drawMap(Latlng, google.maps.MapTypeId.SATELLITE, 1, "pana");
+	var marker = new google.maps.Marker({ position: Latlng, map: map, title: name,icon: '/images/toilet.png' });
+	markers.push(marker);
+	map.setCenter(Latlng);
+	map.setZoom(18);
+  }
+}
+
+</script>
