@@ -4,7 +4,7 @@
 
 <% content_for :after_load do %>
 loadTop10();
-
+//loadSearch();
 $(".tabs li").click(function() { 
 	$(".tabs li").removeClass('active');
 	$(this).addClass('active');
@@ -29,6 +29,8 @@ $(".tabs li").click(function() {
     </div>
 	<div id="top10" class="" style='display:none;'></div>
 	<div id="index" class="" style='display:none;'></div>
+	<div id="search" class="" style='display:none;'></div>
+	
 </section>
 
 <script>
@@ -39,18 +41,23 @@ function loadTop10(){
 	$.getJSON('/api/toilets/top_10.json', function(data) {
 		items = [];
 		$.each(data, function(key, val) {
-	    items.push('<li id="' + key + '">' + 
-					'<a href="/toilets/'+ val.toilet.to_param + '">' +
-					val.toilet.location + 
-					'</a></li>');
+	    items.push('<li id="' + key + '" class="listview-container">' + 
+					'<div class="inner"><div class="text"><a href="/toilets/'+ val.toilet.to_param + '">' +
+					'<h3 class="heading">'+ val.toilet.location + '</div>' +
+					'</a></div>' +
+					'<span class="arrow"></span></div></li>');
 	  });
 
 	$('#top10').html(  
 		$('<ul/>', {
-	    	'class': 'my-new-list',
+	    	'class': 'listview',
 	    	html: items.join('')
 	  	})
 	);
+	
+	$('#top10 ul li:first').addClass('top');
+	$('#top10 ul li:last').addClass('bottom');
+	
 	});
 }
 function loadIndex(){
@@ -59,23 +66,30 @@ function loadIndex(){
 	$.getJSON('/api/toilets.json?limit=5', function(data) {
 		items = [];
 		$.each(data, function(key, val) {
-	    items.push('<li id="' + key + '">' + 
-					'<a href="/toilets/'+ val.toilet.to_param + '">' +
-					val.toilet.location + 
-					'</a></li>');
+	    items.push(	'<li id="' + key + '" class="listview-container">' + 
+						'<div class="inner"><div class="text"><a href="/toilets/'+ val.toilet.to_param + '">' +
+						'<h3 class="heading">'+ val.toilet.location + '</div>' +
+						'</a></div>' +
+						'<span class="arrow"></span></div></li>');
 	  });
 
 	$('#index').html(  
 		$('<ul/>', {
-	    	'class': 'my-new-list',
+	    	'class': 'listview',
 	    	html: items.join('')
 	  	})
 	);
+	
+	
+	$('#index ul li:first').addClass('top');
+	$('#index ul li:last').addClass('bottom');
+	
 	
 	});
 }
 function loadSearch(){
 	$('.page-header h2').html('Search Toilets:');
+	$("#search").show();
 }
 
 </script>

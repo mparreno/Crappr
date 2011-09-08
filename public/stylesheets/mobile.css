@@ -197,3 +197,91 @@ section {
 .left { float:left; }
 .right { float:right; }
 
+/***********
+ * Listview *
+ ***********/
+
+.listview {
+	margin-left: 00px;
+	list-style: none;
+	padding: 0;
+}
+
+	.listview .listview-container {
+		display: block;
+		margin: 0;
+		position: relative;
+		overflow: visible;
+		text-align: left;
+		border-width: 0;
+		border: 1px solid gray;
+		background: #ffffff;
+	}
+	
+	.listview .top {
+		moz-border-radius-topleft: .6em;
+		-webkit-border-top-left-radius: .6em;
+		border-top-left-radius: .6em;
+		-moz-border-radius-topright: .6em;
+		-webkit-border-top-right-radius: .6em;
+		border-top-right-radius: .6em;
+	}
+	.listview .bottom {
+		moz-border-radius-bottomleft: .6em;
+		-webkit-border-bottom-left-radius: .6em;
+		border-bottom-left-radius: .6em;
+		-moz-border-radius-bottompright: .6em;
+		-webkit-border-bottom-right-radius: .6em;
+		border-bottom-right-radius: .6em;
+	}
+	
+	.listview .listview-container .inner{
+		display: block;
+		position: relative;
+		padding: 0;
+	}
+	
+	.listview .listview-container .inner .text{
+		text-align: left;
+	}
+	
+	.listview .listview-container .inner .text a{
+		padding: .7em 75px .7em 15px;
+		display: block;
+	}
+	
+	.listview .listview-container .inner .text h3{
+		font-size: 16px;
+		font-weight: bold;
+		display: block;
+		margin: .6em 0;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	.listview .listview-container .inner .text .desc{
+		font-size: 12px;
+		font-weight: normal;
+		display: block;
+		margin: -.5em 0 .6em;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	
+	.listview .listview-container  .arrow {
+		right: 10px;
+		position: absolute;
+		top: 50%;
+		margin-top: -9px;
+		width: 18px;
+		height: 18px;
+		background: #666;
+		background: rgba(0, 0, 0, .4);
+		background-image: url(/images/icons.png);
+		background-repeat: no-repeat;
+		-moz-border-radius: 9px;
+		-webkit-border-radius: 9px;
+		border-radius: 9px;
+		background-position: -108px 50%;
+	}
