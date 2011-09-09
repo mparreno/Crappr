@@ -201,11 +201,7 @@ section {
  * Listview *
  ***********/
 
-.listview {
-	margin-left: 00px;
-	list-style: none;
-	padding: 0;
-}
+.listview { margin-left: 0px; list-style: none; padding: 0; }
 
 	.listview .listview-container {
 		display: block;
