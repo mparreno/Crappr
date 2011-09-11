@@ -20,7 +20,7 @@ group :development, :test do
   
   #Metrics
   gem 'metric_fu'
-  
   gem 'heroku'
+  gem 'taps'
     
 end

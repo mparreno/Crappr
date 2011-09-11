@@ -34,8 +34,7 @@
     <h1>Reviews:</h1>
   </div>
   <div id="reviews-list">
-  	<%= render(:partial => 'reviews/review', :collection => @reviews.compact) || 
-  			"<li>Sorry this toilet has no reviews.</li>".html_safe %>
+  	<%= render(:partial => 'reviews/review', :collection => @reviews.compact)%>
   </div>
 
   <%= will_paginate @reviews %>
