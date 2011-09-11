@@ -157,6 +157,3 @@ div .show {
 .clear { clear:both; }
 .left { float:left; }
 .right { float:right; }
-#search-bar {float: right;
-margin-left: 10px;
-margin-right: 0;}
