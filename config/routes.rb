@@ -14,10 +14,10 @@ Crappr::Application.routes.draw do
       get 'top_10', :on => :collection
     end
     
-    resources :reviews, :only => [:create] do
+    resources :reviews, :only => [:create, :index] do
     end
     
-    resources :suburbs do
+    resources :suburbs, :only => [:show, :index] do
       get 'toilets', :on => :member
     end
   end

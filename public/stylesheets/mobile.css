@@ -246,6 +246,10 @@ section {
 		display: block;
 	}
 	
+	.listview .listview-container .listview-text {
+		padding: .7em 35px .7em 15px;
+	}
+	
 	.listview .listview-container .inner .text h3{
 		line-height: 15px;
 		font-size: 14px;

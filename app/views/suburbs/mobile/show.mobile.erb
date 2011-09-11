@@ -3,50 +3,32 @@
 <% end %>
 
 <% content_for :after_load do %>
-loadTop10();
-//loadSearch();
-$(".tabs li").click(function() { 
-	$(".tabs li").removeClass('active');
-	$(this).addClass('active');
-	
-	$("section#toilets div").not('.page-header').hide();
-	
-	var funct = $(this).children('a').attr('data-function');
-	window[funct]();
-	return false;
-});
+loadSuburbs();
 <% end %>
 
-
-<ul class="tabs">
-  <li class="active"><a href="" id="top-10-link" data-function='loadTop10'>Top 10</a></li>
-  <li><a href="" id="index-link" data-function='loadSuburbs'>By Suburb</a></li>
-  <li><a href="" id="index-link" data-function='loadIndex'>All Toilets</a></li>
-</ul>
 <section id="toilets">
 	<div class="page-header">
     	<h2></h2>
     </div>
-	<div id="top10" class="" style='display:none;'></div>
 	<div id="suburbs" class="" style='display:none;'></div>
-	<div id="index" class="" style='display:none;'></div>
 	
 </section>
 
 <script>
 function loadSuburbs(){
 	$("#suburbs").show();
-	$('.page-header h2').html('Browse by Suburb:');
+	$('.page-header h2').html('<%= @suburb.name %>');
 	
-	$.getJSON('/api/suburbs.json', function(data) {
+	$.getJSON('/api/suburbs/<%= @suburb.id %>/toilets.json', function(data) {
 		items = [];
 		$.each(data, function(key, val) {
-	    items.push('<li id="' + key + '" class="listview-container">' + 
-					'<div class="inner"><div class="text"><a href="/suburbs/'+ val.suburb.id + '">' +
-					'<h3 class="heading">'+ val.suburb.name + '</h3>' +
-					'</div>' +
-					'</a></div>' +
-					'<span class="arrow"></span></div></li>');
+	    items.push(	'<li id="' + key + '" class="listview-container">' + 
+							'<div class="inner"><div class="text"><a href="/toilets/'+ val.toilet.to_param + '">' +
+							'<h3 class="heading">'+ val.toilet.location + '</h3>' +
+							'<p class="rating">' + drawStars(val.toilet.rating) + '</p>' +
+							'</div>' +
+							'</a></div>' +
+							'<span class="arrow"></span></div></li>');
 	  });
 
 	$('#suburbs').html(  

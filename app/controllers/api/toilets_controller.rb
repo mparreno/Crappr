@@ -4,7 +4,13 @@ class Api::ToiletsController < Api::BaseController
   
   def index
     limit = params[:limit] || nil
-    respond_with @toilets = Toilet.limit(limit), :methods => [ :rating, :to_param ]
+    if limit || params[:page]
+      limit ||= 10
+      @toilets = Toilet.paginate(:page => params[:page], :per_page => limit)
+    else
+      @toilets = Toilet.all
+    end
+    respond_with @toilets, :methods => [ :rating, :to_param ]
   end
 
   def show

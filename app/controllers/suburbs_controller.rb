@@ -7,7 +7,10 @@ class SuburbsController < ApplicationController
   end
 
   def show
-    respond_with @suburb
+    respond_to do |format|
+      format.mobile { render :template => 'suburbs/mobile/show' }
+      format.all
+    end
   end
   
   private
