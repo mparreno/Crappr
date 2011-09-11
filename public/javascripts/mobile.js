@@ -10,6 +10,24 @@ function scrollToHide(){
 	setTimeout(scrollTo, 0, 0, 1);
 }
 
+function drawStars(rating){
+	rating = typeof(rating) != 'undefined' ? rating : '0';
+	
+	var stars_markup = "<ul class='star-rating'>";
+	var c = 1;
+
+	while(c < 6){
+		var currentrating = rating == c ? 'current-rating' : '';
+		stars_markup += "<li>";
+		stars_markup += "<span class='stars-" + c + ' ' +  currentrating + "'></span>";
+		stars_markup += "</li>";
+		c++;
+	}
+	stars_markup += "</ul>";
+	
+	return stars_markup;
+}
+
 //Scripts for the index page
 function findNearestToilets(limit) {
   $('#toilets').html("Loading some crapprs...");
@@ -19,29 +37,35 @@ function findNearestToilets(limit) {
         var lat = coords.latitude;
         var long = coords.longitude;
 				
-				$.getJSON('/api/toilets/nearby.json?lat=' + lat + '&lng=' + long + '&limit=' + limit, function(data) {
+				$.getJSON('/api/toilets/nearby.json?lat=' + lat + '&lng=' + long + '&limit=' + 4, function(data) {
 					 var items = [];
 					
 					  $.each(data, function(key, val) {
-					    items.push('<li id="' + key + '">' + 
-									'<a href="/toilets/'+ val.toilet.to_param + '">' +
-									val.toilet.location + 
-									'</a> (' +
-									val.toilet.dist + 'm away)</li>');
+					    items.push(
+						 		'<li id="' + key + '" class="listview-container">' + 
+											'<div class="inner"><div class="text"><a href="/toilets/'+ val.toilet.to_param + '">' +
+											'<h3 class="heading">'+ val.toilet.location + ' <br />(' +
+											val.toilet.dist + 'm away) </h3>' +
+											'<p class="rating">' + drawStars(val.toilet.rating) + '</p>' +
+											'</div>' +
+											'</a></div>' +
+											'<span class="arrow"></span></div></li>')
 					  });
 
 					$('#toilets').html(  
 						$('<ul/>', {
-					    	'class': 'my-new-list',
+					    	'class': 'listview',
 					    	html: items.join('')
 					  	})
 					);
-					$('<h2>Toilets:</h2>').prependTo('#toilets');
+					$('<h2>Nearest 4 Toilets:</h2>').prependTo('#toilets');
+					$('#toilets ul li:first').addClass('top');
+					$('#toilets ul li:last-child').addClass('bottom');
 
 				});
 				
       }, function() {
-        $('#toilets').html("Sorry, we were unable to get your location. <a href='javascript:findNearestToilets();'>Retry.</a>");
+        $('#toilets').html("Sorry, we were unable to get your location. Possibly try enabling location services. <a href='javascript:findNearestToilets();'>Retry.</a>");
       }
     );
   } else {

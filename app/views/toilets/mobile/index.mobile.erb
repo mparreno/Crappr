@@ -21,7 +21,6 @@ $(".tabs li").click(function() {
 <ul class="tabs">
   <li class="active"><a href="" id="top-10-link" data-function='loadTop10'>Top 10</a></li>
   <li><a href="" id="index-link" data-function='loadIndex'>Toilets</a></li>
-  <li><a href="" id="index-link" data-function='loadSearch'>Search</a></li>
 </ul>
 <section id="toilets">
 	<div class="page-header">
@@ -42,7 +41,9 @@ function loadTop10(){
 		$.each(data, function(key, val) {
 	    items.push('<li id="' + key + '" class="listview-container">' + 
 					'<div class="inner"><div class="text"><a href="/toilets/'+ val.toilet.to_param + '">' +
-					'<h3 class="heading">'+ val.toilet.location + '</div>' +
+					'<h3 class="heading">'+ val.toilet.location + '</h3>' +
+					'<p class="rating">' + drawStars(val.toilet.rating) + '</p>' +
+					'</div>' +
 					'</a></div>' +
 					'<span class="arrow"></span></div></li>');
 	  });
@@ -55,7 +56,7 @@ function loadTop10(){
 	);
 	
 	$('#top10 ul li:first').addClass('top');
-	$('#top10 ul li:last').addClass('bottom');
+	$('#top10 ul li:last-child').addClass('bottom');
 	
 	});
 }
@@ -67,7 +68,9 @@ function loadIndex(){
 		$.each(data, function(key, val) {
 	    items.push(	'<li id="' + key + '" class="listview-container">' + 
 						'<div class="inner"><div class="text"><a href="/toilets/'+ val.toilet.to_param + '">' +
-						'<h3 class="heading">'+ val.toilet.location + '</div>' +
+						'<h3 class="heading">'+ val.toilet.location + '</h3>' +
+						'<p class="rating">' + drawStars(val.toilet.rating) + '</p>' +
+						'</div>' +
 						'</a></div>' +
 						'<span class="arrow"></span></div></li>');
 	  });
@@ -81,7 +84,7 @@ function loadIndex(){
 	
 	
 	$('#index ul li:first').addClass('top');
-	$('#index ul li:last').addClass('bottom');
+	$('#index ul li:last-child').addClass('bottom');
 	
 	
 	});

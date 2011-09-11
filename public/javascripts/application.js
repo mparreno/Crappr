@@ -95,7 +95,8 @@ function getIndex(){
 		});
 }
 
-function getMarkersFor(url){
+function getMarkersFor(url, cluster){
+	cluster = typeof(cluster) != 'undefined' ? cluster : 'true';
 	$.getJSON(url, function(data) {
 	
 		$.each(data, function(key, val) {
@@ -106,9 +107,10 @@ function getMarkersFor(url){
 						"toilet.png"
 						);
 	  	});
-		
-			var mcOptions     = { gridSize: 50, maxZoom: 12 };
-			var markerCluster = new MarkerClusterer(map, markers, mcOptions);
+			if (cluster) {
+				var mcOptions     = { gridSize: 50, maxZoom: 12 };
+				var markerCluster = new MarkerClusterer(map, markers, mcOptions);
+			}
 	
 	});
 	

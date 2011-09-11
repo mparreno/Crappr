@@ -157,3 +157,7 @@ div .show {
 .clear { clear:both; }
 .left { float:left; }
 .right { float:right; }
+
+hr.divider {
+	margin: 19px 0px 19px 0px;
+}

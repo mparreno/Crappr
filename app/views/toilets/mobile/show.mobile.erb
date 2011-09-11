@@ -39,8 +39,12 @@ $(".tabs li").click(function() {
 			</li>
 		<% end %>
 	</ul>
+
 	<p class="small">(<%= @toilet.reviews.count %> ratings)</p>
     <div class="clear"></div>
+	<hr class='divider'/>
+  	<p><%= link_to 'Open Map', "http://maps.google.com/maps?q=#{@toilet.lat},#{@toilet.lng}"  %></p>
+	<hr class='divider'/>
   	<p><%= link_to 'Back to all', toilets_path %></p>
   </div>
   <div id="map_div" class="" style='display:none;'>Google Maps</div>

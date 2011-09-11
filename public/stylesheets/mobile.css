@@ -242,18 +242,18 @@ section {
 	}
 	
 	.listview .listview-container .inner .text a{
-		padding: .7em 75px .7em 15px;
+		padding: .7em 35px .7em 15px;
 		display: block;
 	}
 	
 	.listview .listview-container .inner .text h3{
-		font-size: 16px;
+		line-height: 15px;
+		font-size: 14px;
 		font-weight: bold;
 		display: block;
-		margin: .6em 0;
+		margin: 0em 0;
 		text-overflow: ellipsis;
 		overflow: hidden;
-		white-space: nowrap;
 	}
 	.listview .listview-container .inner .text .desc{
 		font-size: 12px;
