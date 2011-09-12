@@ -10,6 +10,20 @@ function scrollToHide(){
 	setTimeout(scrollTo, 0, 0, 1);
 }
 
+function reviewListItem(name, date_string, text, value){
+	  x = date_string.match( /(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})/ );
+		var d = new Date(x[1],x[2],x[3],x[4],x[5],x[6]);
+		
+		return '<li class="listview-container">' + 
+  	 '<div class="inner listview-text"><div class="text">' +
+  	 '<h3 class="heading">'+ name + ' (' + 
+	   x[3] +'/'+ x[2] + '/'+ x[1] + ')</h3>' +
+	   '<p>'+text+'</p>'+
+  	 '<p class="rating">' + drawStars(value) + '</p>' +
+  	 '</div>' +
+  	 '</div>' +'</div></li>'
+}
+
 function drawStars(rating){
 	rating = typeof(rating) != 'undefined' ? rating : '0';
 	
