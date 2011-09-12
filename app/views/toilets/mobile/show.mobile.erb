@@ -13,6 +13,44 @@ $(".tabs li").click(function() {
 	window[funct]();
 	return false;
 });
+
+$('#show-form, #cancel').click(function(){
+	$('#reviews_add_form').slideToggle();
+	$('#reviews_add').slideToggle();
+	return false;
+});
+
+jQuery.fn.submitWithAjax = function() {
+  this.submit(function() {
+    $.post(this.action, $(this).serialize(), function(data){
+		$('#reviews_add_form').slideUp();
+		var date_string = data.review.created_at;
+		x = date_string.match( /(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})/ );
+		var d = new Date(x[1],x[2],x[3],x[4],x[5],x[6]);
+		$("#reviews_list ul.listview").prepend(
+			'<li class="listview-container">' + 
+		  	 '<div class="inner listview-text"><div class="text">' +
+		  	 '<h3 class="heading">'+ data.review.name + ' (' + 
+			 x[3] +'/'+ x[2] + '/'+ x[1] + ')</h3>' +
+			 '<p>'+data.review.text+'</p>'+
+		  	 '<p class="rating">' + drawStars(data.review.value) + '</p>' +
+		  	 '</div>' +
+		  	 '</div>' +'</div></li>'
+		);
+		$('#reviews_list ul li').removeClass('top');
+		$('#reviews_list ul li:first').addClass('top');
+		document.reviews_add_form.reset();
+	}, "json");
+	
+    return false;
+  })
+  return this;
+};
+
+$(document).ready(function() {
+  $("form.reviews_add_form").submitWithAjax();
+})
+
 <% end %>
 
 <ul class="tabs">
@@ -51,8 +89,40 @@ $(".tabs li").click(function() {
   <div id="pana" class="" style='display:none;'>Google StreetView</div>
   <div id="reviews" class="" style='display:none;'>
 	<div id="reviews_add" class="" style='display:block;'>
-		<%= link_to "ADD A REVIEW", toilets_url, :class => "button home-btn" %>
+		<%= link_to "ADD A REVIEW", toilets_url, :class => "button home-btn", :id => "show-form"%>
 	</div>
+	<div id="reviews_add_form" class="" style='display:none;'>
+
+		<% form_tag reviews_api_toilet_path(@toilet) + ".json", :class => 'reviews_add_form', :name => 'reviews_add_form' do %>
+		  <fieldset>
+		  <legend>Write a Review:</legend>
+		  <%= hidden_field_tag :toilet_id, @toilet.id %>
+		  <div class="clearfix">
+		    <%= label_tag :name %>
+		    <div class="input"><%= text_field_tag :name %></div>
+		  </div>
+		  <div class="clearfix">
+		    <%= label_tag :text, "Review" %>
+		    <div class="input"><%= text_area_tag :text, '', :rows => 8 %></div>
+		  </div>
+		  <div class="clearfix">
+		    <%= label_tag :value, "Rating" %>
+		    <div class="input">
+				<ul class="radio-rating">
+					<% (1..5).each do |i| %>
+						<li><%= "#{i}" %> <%= radio_button_tag :value, i %> |</li>
+					<% end %>
+				</ul>
+			</div>
+		  </div>
+
+		  <div class="actions">
+		    <button type="submit" class="btn primary" id='submit'>Add Review</button>
+			<button type="submit" class="btn secondary" id='cancel'>Cancel</button>
+		   </div>
+		</fieldset>
+		<% end %>
+	</div>	
 	<div id="reviews_list" class="">
 	</div>
   </div>
@@ -69,7 +139,7 @@ function loadDetails(){
 
 function loadReviews(){
   $("#reviews").show();
-  $("#reviews div").show();
+  $("#reviews div").not('#reviews_add_form').show();
 	
   $.getJSON('/api/toilets/<%= @toilet.id %>/reviews.json', function(data) {
   	items = [];

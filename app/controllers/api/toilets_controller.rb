@@ -42,7 +42,10 @@ class Api::ToiletsController < Api::BaseController
     name = params[:name]
     
     @review = @toilet.reviews.create :value => value, :text => text, :name => name
-    respond_with @review
+    respond_to do |format|
+      format.json { render :json => @review }
+      format.xml { render :xml => @review }
+    end
   end
   
   private

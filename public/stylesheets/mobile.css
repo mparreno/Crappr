@@ -285,3 +285,26 @@ section {
 		border-radius: 9px;
 		background-position: -108px 50%;
 	}
+	
+	div.input {
+		margin-left: 79px;
+	}
+	
+	label {
+		width: 50px;
+	}
+	
+	.radio-rating{
+		position:relative;
+		width:200px;
+		height:25px;
+		overflow:hidden;
+		list-style:none;
+		margin:0;
+		padding:0;
+		background-position: left top;
+	}
+	.radio-rating li { display: inline; }
+	.actions{background:#f5f5f5;margin-top:18px;margin-bottom:18px;padding:17px 20px 18px 50px;
+		border-top:1px solid #ddd;-webkit-border-radius:0 0 3px 3px;-moz-border-radius:0 0 3px 3px;border-radius:0 0 3px 3px;}
+		fieldset legend { margin-left: 79px; }	
