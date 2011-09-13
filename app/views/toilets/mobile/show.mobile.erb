@@ -24,17 +24,11 @@ jQuery.fn.submitWithAjax = function() {
   this.submit(function() {
     $.post(this.action, $(this).serialize(), function(data){
 		$('#reviews_add_form').hide();
-		var date_string = data.review.created_at;
-		x = date_string.match( /(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})/ );
-		var d = new Date(x[1],x[2],x[3],x[4],x[5],x[6]);
 		if( $('#reviews_list ul.listview').length ){
-			$("#reviews_list ul.listview").prepend(
-				reviewListItem(data.review.name, data.review.created_at, data.review.text, data.review.value)
-			);
+			$("#reviews_list ul.listview").prepend(reviewListItem(data.review.name, data.review.created_at, data.review.text, data.review.value));
 			$('#reviews_list ul li').removeClass('top bottom');
 			$('#reviews_list ul li:first').addClass('top');
 			$('#reviews_list ul li:last-child').addClass('bottom');
-			
 		}
 		document.reviews_add_form.reset();
 	}, "json");
@@ -131,6 +125,7 @@ $(document).ready(function() {
 
 function loadDetails(){
   $("#info").show();
+  //Update the toilet stars rating :)
 }
 
 function loadReviews(){
@@ -141,12 +136,7 @@ function loadReviews(){
   	items = [];
 
   	$.each(data, function(key, val) {
-	var date_string = val.review.created_at;
-	x = date_string.match( /(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})/ );
-	var d = new Date(x[1],x[2],x[3],x[4],x[5],x[6]);
-      items.push(	
-				reviewListItem(val.review.name, val.review.created_at, val.review.text, val.review.value)
-				);
+      items.push(reviewListItem(val.review.name, val.review.created_at, val.review.text, val.review.value));
   });
 	$('#reviews_list').html(  
 		$('<ul/>', {

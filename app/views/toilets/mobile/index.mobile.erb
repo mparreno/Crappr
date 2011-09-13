@@ -4,7 +4,7 @@
 
 <% content_for :after_load do %>
 loadTop10();
-//loadSearch();
+
 $(".tabs li").click(function() { 
 	$(".tabs li").removeClass('active');
 	$(this).addClass('active');
@@ -13,6 +13,19 @@ $(".tabs li").click(function() {
 	
 	var funct = $(this).children('a').attr('data-function');
 	window[funct]();
+	return false;
+});
+
+$("a.paginate").live('click',function() { 
+	var new_page = $(this).attr('data-page');
+	
+	// Hard coded for now (should really be handled in the API :P)
+	if (new_page < 1 || new_page > 8) {
+		return false;
+	} else {
+		$('#page').attr('data-page', new_page);
+	}
+	loadIndex();
 	return false;
 });
 <% end %>
@@ -29,7 +42,8 @@ $(".tabs li").click(function() {
     </div>
 	<div id="top10" class="" style='display:none;'></div>
 	<div id="suburbs" class="" style='display:none;'></div>
-	<div id="index" class="" style='display:none;'></div>
+	<div id="index" class="" style='display:none;'>
+	</div>
 	
 </section>
 
@@ -93,7 +107,13 @@ function loadTop10(){
 function loadIndex(){
 	$("#index").show();
 	$('.page-header h2').html('All Toilets:');
-	$.getJSON('/api/toilets.json?limit=10', function(data) {
+	var page = $('#page').attr('data-page');
+	page = typeof(page) != 'undefined' ? (parseInt(page)): 1;
+	
+	var next_page = (parseInt(page)) + 1;
+	var prev_page = (parseInt(page)) - 1;
+	
+	$.getJSON('/api/toilets.json?limit=10&page='+page, function(data) {
 		items = [];
 		$.each(data, function(key, val) {
 	    items.push(	'<li id="' + key + '" class="listview-container">' + 
@@ -111,7 +131,8 @@ function loadIndex(){
 	    	html: items.join('')
 	  	})
 	);
-	
+	var pagination = '<p id="page" data-page="'+page+'"> <a href="" data-page="'+prev_page+'" class="paginate left"> Previous</a> <a href="" data-page="'+ next_page +'" class="paginate right">Next</a> </p>';
+	$("#index").append(pagination);
 	
 	$('#index ul li:first').addClass('top');
 	$('#index ul li:last-child').addClass('bottom');

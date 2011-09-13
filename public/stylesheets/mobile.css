@@ -308,3 +308,8 @@ section {
 	.actions{background:#f5f5f5;margin-top:18px;margin-bottom:18px;padding:17px 20px 18px 50px;
 		border-top:1px solid #ddd;-webkit-border-radius:0 0 3px 3px;-moz-border-radius:0 0 3px 3px;border-radius:0 0 3px 3px;}
 		fieldset legend { margin-left: 79px; }	
+		
+a.paginate {
+	font-size: 18px;
+	padding: 0 0 20px 0;
+}
