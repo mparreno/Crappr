@@ -68,7 +68,7 @@ $(document).ready(function() {
 		<% end %>
 	</ul>
 
-	<p class="small">(<%= @toilet.reviews.count %> ratings)</p>
+	<p class="small rating-count">(<%= @toilet.reviews.count %> ratings)</p>
     <div class="clear"></div>
 	<hr class='divider'/>
   	<p><%= link_to 'Open Map', "http://maps.google.com/maps?q=#{@toilet.lat},#{@toilet.lng}"  %></p>
@@ -126,6 +126,10 @@ $(document).ready(function() {
 function loadDetails(){
   $("#info").show();
   //Update the toilet stars rating :)
+  $.getJSON('/api/toilets/<%= @toilet.id %>.json', function(data) {
+	$('#toilet .star-rating').html(drawStars(data.toilet.rating));
+	$('#toilet .rating-count').html("("+data.toilet.rating_count+" ratings)");
+  });
 }
 
 function loadReviews(){

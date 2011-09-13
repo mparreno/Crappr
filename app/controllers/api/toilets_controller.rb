@@ -14,7 +14,7 @@ class Api::ToiletsController < Api::BaseController
   end
 
   def show
-    respond_with @toilet, :methods => [:rating, :to_param]
+    respond_with @toilet, :methods => [:rating, :to_param, :rating_count]
   end
   
   def nearby

@@ -30,7 +30,11 @@ class Toilet < ActiveRecord::Base
   # Instance Methods   
   def rating
     reviews.average(:value).try(:round) 
-  end   
+  end
+  
+  def rating_count
+    reviews.count
+  end
   
   # Dirty hack!! 
   # Found issue here: https://rails.lighthouseapp.com/projects/8994/tickets/4840-to_xml-doesnt-work-in-such-case-eventselecttitle-as-tto_xml
