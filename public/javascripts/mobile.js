@@ -58,8 +58,8 @@ function findNearestToilets(limit) {
 					    items.push(
 						 		'<li id="' + key + '" class="listview-container">' + 
 											'<div class="inner"><div class="text"><a href="/toilets/'+ val.toilet.to_param + '">' +
-											'<h3 class="heading">'+ val.toilet.location + ' <br />(' +
-											val.toilet.dist + 'm away) </h3>' +
+											'<h3 class="heading">'+ val.toilet.location + ' <br /> (' +
+											val.toilet.dist + 'm away ) </h3>' +
 											'<p class="rating">' + drawStars(val.toilet.rating) + '</p>' +
 											'</div>' +
 											'</a></div>' +
@@ -79,7 +79,7 @@ function findNearestToilets(limit) {
 				});
 				
       }, function() {
-        $('#toilets').html("Sorry, we were unable to get your location. Possibly try enabling location services. <a href='javascript:findNearestToilets();'>Retry.</a>");
+        $('#toilets').html("Sorry, we were unable to get your location. Possibly try enabling location services. <a href='javascript:findNearestToilets();'>Try Again?</a>");
       }
     );
   } else {

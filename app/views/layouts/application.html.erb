@@ -19,6 +19,9 @@
 	        <li class=""><%= link_to "About", about_path %></li>
 			<li class=""><%= link_to "Suburbs", suburbs_path %></li>
 	        <li class=""><%= link_to "Toilets", toilets_path %></li>
+			<% if is_mobile?%>
+				<li class=""><%= link_to "Back to Mobile Site", root_url(:mobile => 1), :rel => "external" %></li>
+			<% end %>
 	      </ul>
 	    </div>
 	  </div>

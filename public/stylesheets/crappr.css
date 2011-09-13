@@ -161,3 +161,8 @@ div .show {
 hr.divider {
 	margin: 19px 0px 19px 0px;
 }
+
+#topbar-right-link {float: right;
+margin-left: 10px;
+margin-right: 0;
+}
