@@ -19,8 +19,10 @@ class ToiletsController < ApplicationController
     end
   end
   
+  # FIXME wat.
   def rate
-    @toilet.reviews.create :value => params[:rating]
+    @review = @toilet.reviews.create :name => "Anonymous", :value => params[:rating]
+    render
   end
   
   private

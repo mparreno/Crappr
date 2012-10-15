@@ -3,10 +3,11 @@ FactoryGirl.define do
     s.name "Northland"
   end
 
-  factory :toilet do |toilet|
-    toilet.location ""
-    toilet.lat ""
-    toilet.lng ""
+  factory :toilet do |t|
+    t.name "Test Toilet"
+    t.location "Northland, Wellington"
+    t.lat -41.283225
+    t.lng 174.75762
   end
 
   factory :review do |r|
