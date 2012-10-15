@@ -4,10 +4,13 @@ class Toilet < ActiveRecord::Base
   
   # Associations
   has_many :reviews
-  belongs_to :suburbs
+  belongs_to :suburb
   
   # Validations
-  # Needs: Lat, Long, Location
+  validates_presence_of :name
+  validates_presence_of :location
+  validates_numericality_of :lat, :greater_than_or_equal_to => -90.0, :less_than_or_equal_to => 90.0
+  validates_numericality_of :lng, :greater_than_or_equal_to => -180.0, :less_than_or_equal_to => 180.0
   
   # Scopes
   scope :top_ids, lambda { |limit|

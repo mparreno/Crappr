@@ -10,13 +10,15 @@ group :development, :test do
    gem 'spork', '~> 0.9.0.rc'
   
   #Speccing
-  gem 'rspec-rails', '~> 2.0.1'
-  gem 'factory_girl_rails', '1.1.beta1'
+  gem 'rspec-rails', '~> 2.2'
+  gem 'factory_girl_rails'
+  gem 'shoulda'
   gem 'capybara'
   gem 'launchy'
   
   #Debugging
-  gem 'ruby-debug19'
+  gem 'debugger' # <- Works with 1.9.3 and 1.9.2
+  gem 'test-unit'
   
   #Metrics
   gem 'metric_fu'

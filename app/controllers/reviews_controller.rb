@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
-  respond_to :html, :js
+  respond_to :js
   def create
+    # TODO this should always be creating on a toilet object
     @review = Review.create(params[:review])
     
     if @review.valid?
