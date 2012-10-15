@@ -8,4 +8,10 @@ FactoryGirl.define do
     toilet.lat ""
     toilet.lng ""
   end
+
+  factory :review do |r|
+    r.name "Tester"
+    r.value 3
+    r.association(:toilet)
+  end
 end
