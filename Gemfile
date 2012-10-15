@@ -10,7 +10,7 @@ group :development, :test do
    gem 'spork', '~> 0.9.0.rc'
   
   #Speccing
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 2.2'
   gem 'factory_girl_rails'
   gem 'shoulda'
   gem 'capybara'
