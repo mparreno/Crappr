@@ -17,7 +17,8 @@ group :development, :test do
   gem 'launchy'
   
   #Debugging
-  gem 'ruby-debug19'
+  gem 'debugger' # <- Works with 1.9.3 and 1.9.2
+  gem 'test-unit'
   
   #Metrics
   gem 'metric_fu'
