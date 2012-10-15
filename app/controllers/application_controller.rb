@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   
   before_filter :prepare_for_mobile
+  helper_method :mobile_device?
   
   private
 
@@ -12,7 +13,6 @@ class ApplicationController < ActionController::Base
       request.user_agent =~ /Mobile|webOS/ && !(request.user_agent =~ /iPad/)
     end
   end
-  helper_method :mobile_device?
 
   def prepare_for_mobile
     session[:mobile_param] = params[:mobile] if params[:mobile]
