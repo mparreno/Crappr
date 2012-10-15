@@ -1,5 +1,5 @@
 class SuburbsController < ApplicationController
-  respond_to :html, :js, :mobile
+  respond_to :html, :mobile
   before_filter :load_suburb, :except => [:index]
   
   def index
