@@ -1,8 +1,8 @@
 <% if @review.valid? %>
 $("#reviews-list").append("<%= escape_javascript(render(:partial => @review)) %>");
 $("#info-rating").html("<%= escape_javascript(render :partial => 'toilets/rating', :locals => {:toilet => @review.toilet }) %>");
-$("#reviews-alerts").append("<%= escape_javascript(render(:partial => 'shared/success', :locals => {:message => flash[:notice] })) %>");
+$("#reviews-alerts").html("<%= escape_javascript(render(:partial => 'shared/success', :locals => {:message => flash[:notice] })) %>");
 $("#new_review")[0].reset();
 <% else %>
-$("#reviews-alerts").append("<%= escape_javascript(render(:partial => 'shared/error', :locals => {:message => flash[:error] })) %>");
+$("#reviews-alerts").html("<%= escape_javascript(render(:partial => 'shared/error', :locals => {:message => flash[:error] })) %>");
 <% end %>

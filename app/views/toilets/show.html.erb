@@ -40,7 +40,7 @@
   <%= will_paginate @reviews %>
 	
   <div id="reviews-alerts"></div>
-  <%= render :partial => 'reviews/form', :locals => {:review => Review.new(:toilet => @toilet) } %>
+  <%= render :partial => 'reviews/form' %>
 </section>
 
 

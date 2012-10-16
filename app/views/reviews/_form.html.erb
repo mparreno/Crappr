@@ -1,7 +1,6 @@
-<% form_for review do |f| %>
+<% form_for [@toilet, @review ||= Review.new], :remote => true do |f| %>
   <fieldset>
   <legend>Write a Review:</legend>
-  <%= f.hidden_field :toilet_id %>
   <div class="clearfix">
     <%= f.label :name %>
     <div class="input"><%= f.text_field :name %></div>
@@ -29,20 +28,3 @@
 </fieldset>
 <% end %>
 
-<script>
-jQuery.ajaxSetup({ 
-  'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
-})
-
-jQuery.fn.submitWithAjax = function() {
-  this.submit(function() {
-    $.post(this.action, $(this).serialize(), null, "script");
-    return false;
-  })
-  return this;
-};
-
-$(document).ready(function() {
-  $("#new_review").submitWithAjax();
-})
-</script>
