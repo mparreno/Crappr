@@ -2,10 +2,10 @@
 <html>
 <head>
   <title>Crappr</title>
-  <%= stylesheet_link_tag 'bootstrap-1.1.1.min', 'crappr' %>
+  <%= stylesheet_link_tag 'application' %>
   <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-  <%= javascript_include_tag 'markerclusterer_compiled', 'jquery.min', 'jquery_ujs', 'application'  %>
+  <%= javascript_include_tag 'application'  %>
 
   <%= csrf_meta_tag %>
 <script type="text/javascript">
@@ -24,11 +24,11 @@
 </head>
 <body>
 <div id="container">
-	<div class="topbar">
-	  <div class="fill">
+	<div class="navbar navbar-fixed-top navbar-inverse">
+	  <div class="navbar-inner">
 	    <div class="container">
-	      <h3><a href="/">Crappr</a></h3>
-	      <ul>
+	      <a class="brand" href="/">Crappr</a>
+	      <ul class="nav">
 	        <li class=""><%= link_to "About", about_path %></li>
 			<li class=""><%= link_to "Suburbs", suburbs_path %></li>
 	        <li class=""><%= link_to "Toilets", toilets_path %></li>
