@@ -1,8 +1,8 @@
 Crappr::Application.routes.draw do
   resources :suburbs, :only => [:show, :index]
-  resources :reviews, :only => [:create]
+  resources :reviews, :only => [:index]
   resources :toilets, :only => [:show, :index] do
-    post 'rate', :on => :member
+    resources :reviews, :only => [:create]
   end
   
   namespace :api do
