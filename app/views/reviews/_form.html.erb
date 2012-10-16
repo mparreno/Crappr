@@ -1,4 +1,4 @@
-<% form_for [@toilet, @review ||= Review.new], :remote => true do |f| %>
+<%= form_for [@toilet, @review ||= Review.new], :remote => true do |f| %>
   <fieldset>
   <legend>Write a Review:</legend>
   <div class="clearfix">
