@@ -1,3 +1,9 @@
+// Crappr Application Javascripts
+//
+//= require jquery
+//= require jquery_ujs
+//= require markerclusterer
+
 var map;
 var markers = [];
 
