@@ -1,4 +1,7 @@
 class Suburb < ActiveRecord::Base
+
+  attr_accessible :name
+  
   # Associations
   has_many :toilets
   validates_presence_of :name
