@@ -100,10 +100,10 @@ function getMarkersFor(url, cluster){
 	$.getJSON(url, function(data) {
 	
 		$.each(data, function(key, val) {
-					val.toilet.location + 
-					addToiletMarker(val.toilet.location, 
-						new google.maps.LatLng(val.toilet.lat,val.toilet.lng), 
-						"<a href='/toilets/"+val.toilet.to_param+"'>View more information</a>", 
+					val.location + 
+					addToiletMarker(val.location, 
+						new google.maps.LatLng(val.lat,val.lng), 
+						"<a href='/toilets/"+val.to_param+"'>View more information</a>", 
 						"toilet.png"
 						);
 	  	});
