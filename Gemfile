@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '~> 3.2'
 gem 'pg'
 gem 'jquery-rails'
+gem 'twitter-bootstrap-rails'
 gem 'hpricot'
 gem 'will_paginate', '~> 3.0.0'
 
