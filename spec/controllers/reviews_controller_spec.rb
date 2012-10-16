@@ -2,7 +2,8 @@ require 'spec_helper'
 
 describe ReviewsController do
 
-  let(:valid_attributes) { {:review => FactoryGirl.attributes_for(:review)} }
+  let(:toilet) { FactoryGirl.create(:toilet) }
+  let(:valid_attributes) { {:toilet_id => toilet.id, :review => FactoryGirl.attributes_for(:review)} }
 
   describe "POST create" do
     before do
