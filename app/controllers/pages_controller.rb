@@ -1,7 +1,7 @@
-class IndexController < ApplicationController
+class PagesController < ApplicationController
   respond_to :html, :mobile
   
-  def index
+  def home
     respond_with @toilets = Toilet.top(10)
   end
   
