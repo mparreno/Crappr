@@ -22,7 +22,7 @@ Crappr::Application.routes.draw do
     end
   end
   
-  match "about" => "index#about"
-  root :to => "index#index"
+  match "about" => "pages#about"
+  root :to => "pages#home"
   
 end
