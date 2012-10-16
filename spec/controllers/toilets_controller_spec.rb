@@ -22,13 +22,4 @@ describe ToiletsController do
     it { assigns(:near_toilets).should be_a ActiveRecord::Relation }
     it { assigns(:reviews).should be_a ActiveRecord::Relation }
   end
-
-  describe "GET rate" do
-    before do 
-      post :rate, :id => toilet.id, :rating => 3, :format => :js
-    end
-
-    it { assigns(:review).should be_persisted }
-    it { should render_template :rate }
-  end
 end
