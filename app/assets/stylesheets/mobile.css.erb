@@ -1,3 +1,11 @@
+/*
+* Crappr mobile stylesheets
+*
+*= require bootstrap_and_overrides
+*= require_self
+*/
+
+
 body{
   -webkit-text-size-adjust:none;
   font-family:Helvetica, Arial, Verdana, sans-serif;
@@ -163,7 +171,7 @@ section {
  ***********/
 
 .star-rating, .star-rating .current-rating, .star-rating span
-{ background: url('/images/star.png') left -1000px repeat-x; }
+{ background: url(<%= asset_path 'star.png' %>) left -1000px repeat-x; }
 .star-rating{
 	position:relative;
 	width:125px;
@@ -278,7 +286,7 @@ section {
 		height: 18px;
 		background: #666;
 		background: rgba(0, 0, 0, .4);
-		background-image: url(/images/icons.png);
+		background-image: url(<%= asset_path 'icons.png' %>);
 		background-repeat: no-repeat;
 		-moz-border-radius: 9px;
 		-webkit-border-radius: 9px;

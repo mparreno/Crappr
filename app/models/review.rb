@@ -1,4 +1,6 @@
 class Review < ActiveRecord::Base
+  attr_accessible :name, :value, :text
+
   # Associations
   belongs_to :toilet
   

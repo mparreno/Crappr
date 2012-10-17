@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Crappr::Application.config.secret_token = '1a3ba12ea43c2865d472bdb015e3a768cf398f13cd34e13fc7509da8da347d7d7f120acf44e61d152b0b73437c3658bc3048c937547a2ba67cdb612925a68f15'
+Crappr::Application.config.secret_token = 'b40c607da0edd9cda6c11f6cdba8c97befb62ae7a350a878fee74371951192d02124d37f1a9cf20d7c85d6693f7ee0aa3e3e0eb4a74bb4a05b1f9a48d947794c'

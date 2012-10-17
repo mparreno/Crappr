@@ -159,7 +159,7 @@ function loadMap(){
   set_map_height_to(250);
   var Latlng = new google.maps.LatLng(<%= @toilet.lat %>,<%= @toilet.lng %>);
   drawMap(Latlng, google.maps.MapTypeId.ROADMAP, 1);
-  var marker = new google.maps.Marker({ position: Latlng, map: map, title: name,icon: '/images/toilet.png' });
+  var marker = new google.maps.Marker({ position: Latlng, map: map, title: name,icon: '/assets/toilet.png' });
   markers.push(marker);
   map.setCenter(Latlng);
   map.setZoom(18);
@@ -200,7 +200,7 @@ function checkNearestStreetView(panoData){
   {
 	alert("Sorry, Google StreetView is unavailable for this Crappr.")
 	drawMap(Latlng, google.maps.MapTypeId.SATELLITE, 1, "pana");
-	var marker = new google.maps.Marker({ position: Latlng, map: map, title: name,icon: '/images/toilet.png' });
+	var marker = new google.maps.Marker({ position: Latlng, map: map, title: name,icon: '/assets/toilet.png' });
 	markers.push(marker);
 	map.setCenter(Latlng);
 	map.setZoom(18);
