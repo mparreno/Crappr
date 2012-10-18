@@ -1,25 +1,11 @@
 Crappr::Application.routes.draw do
-  resources :suburbs, :only => [:show, :index]
+  resources :suburbs, :only => [:show, :index] do
+    resources :toilets, :only => [:index]
+  end
+
   resources :reviews, :only => [:index]
   resources :toilets, :only => [:show, :index] do
-    resources :reviews, :only => [:create]
-  end
-  
-  namespace :api do
-    resources :toilets, :only => [:show, :index] do
-      post 'rate', :on => :member
-      get 'reviews', :on => :member
-      post 'reviews', :action => :create_review, :on => :member
-      get 'nearby', :on => :collection
-      get 'top_10', :on => :collection
-    end
-    
-    resources :reviews, :only => [:create, :index] do
-    end
-    
-    resources :suburbs, :only => [:show, :index] do
-      get 'toilets', :on => :member
-    end
+    resources :reviews, :only => [:index, :create]
   end
   
   match "about" => "pages#about"
