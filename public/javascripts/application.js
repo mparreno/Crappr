@@ -103,7 +103,7 @@ function getMarkersFor(url, cluster){
 					val.toilet.location + 
 					addToiletMarker(val.toilet.location, 
 						new google.maps.LatLng(val.toilet.lat,val.toilet.lng), 
-						"<a href='/toilets/"+val.toilet.to_param+"'>View more information</a>", 
+						"<a href='/toilets/"+val.toilet.id+"'>View more information</a>", 
 						"toilet.png"
 						);
 	  	});

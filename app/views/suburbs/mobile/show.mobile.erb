@@ -19,11 +19,11 @@ function loadSuburbs(){
 	$("#suburbs").show();
 	$('.page-header h2').html('<%= @suburb.name %>');
 	
-	$.getJSON('/api/suburbs/<%= @suburb.id %>/toilets.json', function(data) {
+	$.getJSON('/suburbs/<%= @suburb.id %>/toilets.json', function(data) {
 		items = [];
 		$.each(data, function(key, val) {
 	    items.push(	'<li id="' + key + '" class="listview-container">' + 
-							'<div class="inner"><div class="text"><a href="/toilets/'+ val.toilet.to_param + '">' +
+							'<div class="inner"><div class="text"><a href="/toilets/'+ val.toilet.id + '">' +
 							'<h3 class="heading">'+ val.toilet.location + '</h3>' +
 							'<p class="rating">' + drawStars(val.toilet.rating) + '</p>' +
 							'</div>' +
@@ -48,11 +48,11 @@ function loadSuburbs(){
 function loadTop10(){
 	$("#top10").show();
 	$('.page-header h2').html('Top 10 Toilets:');
-	$.getJSON('/api/toilets/top_10.json', function(data) {
+	$.getJSON('/toilets.json?top=10', function(data) {
 		items = [];
 		$.each(data, function(key, val) {
 	    items.push('<li id="' + key + '" class="listview-container">' + 
-					'<div class="inner"><div class="text"><a href="/toilets/'+ val.toilet.to_param + '">' +
+					'<div class="inner"><div class="text"><a href="/toilets/'+ val.toilet.id + '">' +
 					'<h3 class="heading">'+ val.toilet.location + '</h3>' +
 					'<p class="rating">' + drawStars(val.toilet.rating) + '</p>' +
 					'</div>' +
@@ -75,11 +75,11 @@ function loadTop10(){
 function loadIndex(){
 	$("#index").show();
 	$('.page-header h2').html('All Toilets:');
-	$.getJSON('/api/toilets.json?limit=10', function(data) {
+	$.getJSON('/toilets.json?limit=10', function(data) {
 		items = [];
 		$.each(data, function(key, val) {
 	    items.push(	'<li id="' + key + '" class="listview-container">' + 
-						'<div class="inner"><div class="text"><a href="/toilets/'+ val.toilet.to_param + '">' +
+						'<div class="inner"><div class="text"><a href="/toilets/'+ val.toilet.id + '">' +
 						'<h3 class="heading">'+ val.toilet.location + '</h3>' +
 						'<p class="rating">' + drawStars(val.toilet.rating) + '</p>' +
 						'</div>' +
