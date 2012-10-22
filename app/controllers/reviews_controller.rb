@@ -2,11 +2,12 @@ class ReviewsController < ApplicationController
   respond_to :js
 
   def index
-    render :json => toilet.reviews
+    @reviews = toilet.reviews
+    render :json => @reviews 
   end
 
   def create
-    @review = toilet.reviews.create!(params[:review])
+    @review = toilet.reviews.create(params[:review])
     if @review.valid?
       flash[:notice] = "Thank you for reviewing this toilet"
     else
