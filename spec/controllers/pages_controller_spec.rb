@@ -7,7 +7,7 @@ describe PagesController do
     end
 
     it "sets the top 10 toilets" do
-      assigns(:toilets).should be_a Array
+      assigns(:toilets).should be_a ActiveRecord::Relation
     end
 
     it "renders the correct template" do

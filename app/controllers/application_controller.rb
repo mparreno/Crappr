@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   private
 
   def mobile_device?
+    return false if request.format == "json"
     if session[:mobile_param]
       session[:mobile_param] == "1"
     else

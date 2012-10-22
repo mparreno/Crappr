@@ -1,5 +1,11 @@
 class ReviewsController < ApplicationController
   respond_to :js
+
+  def index
+    @reviews = toilet.reviews
+    render :json => @reviews 
+  end
+
   def create
     @review = toilet.reviews.create(params[:review])
     if @review.valid?
@@ -8,7 +14,10 @@ class ReviewsController < ApplicationController
       flash[:error] = "Unable to add review. Please ensure you have selected a rating and name."
     end
 
-    render
+    respond_to do |format|
+      format.js { render }
+      format.json { render :json => @review }
+    end
   end
 
   def toilet

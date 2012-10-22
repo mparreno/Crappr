@@ -51,13 +51,13 @@ function findNearestToilets(limit) {
         var lat = coords.latitude;
         var long = coords.longitude;
 				
-				$.getJSON('/api/toilets/nearby.json?lat=' + lat + '&lng=' + long + '&limit=' + 4, function(data) {
+				$.getJSON('/toilets.json?lat=' + lat + '&lng=' + long + '&limit=4', function(data) {
 					 var items = [];
 					
 					  $.each(data, function(key, val) {
 					    items.push(
 						 		'<li id="' + key + '" class="listview-container">' + 
-											'<div class="inner"><div class="text"><a href="/toilets/'+ val.toilet.to_param + '">' +
+											'<div class="inner"><div class="text"><a href="/toilets/'+ val.toilet.id + '">' +
 											'<h3 class="heading">'+ val.toilet.location + ' <br /> (' +
 											val.toilet.dist + 'm away ) </h3>' +
 											'<p class="rating">' + drawStars(val.toilet.rating) + '</p>' +

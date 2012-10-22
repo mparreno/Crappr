@@ -83,24 +83,23 @@ $(document).ready(function() {
 	</div>
 	<div id="reviews_add_form" class="" style='display:none;'>
 
-		<% form_tag reviews_api_toilet_path(@toilet) + ".json", :class => 'reviews_add_form', :name => 'reviews_add_form' do %>
+		<% form_tag toilet_reviews_path(@toilet, :format => 'json'), :class => 'reviews_add_form', :name => 'reviews_add_form' do %>
 		  <fieldset>
 		  <legend>Write a Review:</legend>
-		  <%= hidden_field_tag :toilet_id, @toilet.id %>
 		  <div class="clearfix">
-		    <%= label_tag :name %>
-		    <div class="input"><%= text_field_tag :name %></div>
+		    <%= label_tag 'review[name]', 'Name' %>
+		    <div class="input"><%= text_field_tag 'review[name]' %></div>
 		  </div>
 		  <div class="clearfix">
-		    <%= label_tag :text, "Review" %>
-		    <div class="input"><%= text_area_tag :text, '', :rows => 8 %></div>
+		    <%= label_tag 'review[text]', "Review" %>
+		    <div class="input"><%= text_area_tag 'review[text]', '', :rows => 8 %></div>
 		  </div>
 		  <div class="clearfix">
-		    <%= label_tag :value, "Rating" %>
+		    <%= label_tag 'review[value]', "Rating" %>
 		    <div class="input">
 				<ul class="radio-rating">
 					<% (1..5).each do |i| %>
-						<li><%= "#{i}" %> <%= radio_button_tag :value, i %> |</li>
+						<li><%= "#{i}" %> <%= radio_button_tag 'review[value]', i %> |</li>
 					<% end %>
 				</ul>
 			</div>
@@ -126,7 +125,7 @@ $(document).ready(function() {
 function loadDetails(){
   $("#info").show();
   //Update the toilet stars rating :)
-  $.getJSON('/api/toilets/<%= @toilet.id %>.json', function(data) {
+  $.getJSON('/toilets/<%= @toilet.id %>.json', function(data) {
 	$('#toilet .star-rating').html(drawStars(data.toilet.rating));
 	$('#toilet .rating-count').html("("+data.toilet.rating_count+" ratings)");
   });
@@ -136,7 +135,7 @@ function loadReviews(){
   $("#reviews").show();
   $("#reviews div").not('#reviews_add_form').show();
 	
-  $.getJSON('/api/toilets/<%= @toilet.id %>/reviews.json', function(data) {
+  $.getJSON('/toilets/<%= @toilet.id %>/reviews.json', function(data) {
   	items = [];
 
   	$.each(data, function(key, val) {

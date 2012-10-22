@@ -3,7 +3,7 @@
     {
 		set_map_height_to(600);
 		drawMap(174.613088, -41.613483, 175.00124, -40.873161, google.maps.MapTypeId.TERRAIN, 11);
-		getMarkersFor('/api/suburbs/<%= @suburb.id %>/toilets.json');
+		getMarkersFor('/suburbs/<%= @suburb.id %>/toilets.json');
     });
 </script>
 <section id="top-10">
