@@ -14,9 +14,9 @@ class Toilet < ActiveRecord::Base
   # Scopes
   scope :top_ids, lambda { |limit|
         joins(:reviews).
-        select('toilets.id, AVG(reviews.value) AS average').
+        select('toilets.id').
         group('toilets.id').
-        order('average desc').
+        order('AVG(reviews.value) desc').
         limit(limit)
     }
 

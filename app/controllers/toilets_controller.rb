@@ -8,7 +8,7 @@ class ToiletsController < ApplicationController
       .nearby(params[:lat], params[:lng])
       .top(params[:top])
       .limit(params.fetch(:limit, nil))
-    @toilets = @toilets.paginate(params[:page]) if params[:page]
+    @toilets = @toilets.paginate(:page => params[:page]) if params[:page]
     respond_to do |format|
       format.mobile { render :template => 'toilets/mobile/index' }
       format.json   { render :json => @toilets, :methods => [:dist, :rating, :rating_count] }
