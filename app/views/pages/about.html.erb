@@ -10,9 +10,8 @@
     <div class="span6 columns">
       <h3>History</h3>
       <p>The Crappr website was created by Michael Parreno-Villa during the <a href="http://www.mixandmash.org.nz/" title="mix &amp; mash - the great NZ remix &amp; mashup competition">Mix and Mash competition 2011</a>.</p> 
-      <p></p>
     </div>
-    <div class="span5 columns">
+    <div class="span6 columns">
       <h3>Credits</h3>
  		<ul>
 			<li><a href="http://data.govt.nz/dataset/show/1137">Wellington City Public Conveniences</a> data used under the Creative Commons Attribution 3.0 New Zealand licence</li>
@@ -21,19 +20,10 @@
 			<li>MarkerClusterer is part of the <a href="http://code.google.com/p/google-maps-utility-library-v3/" title="google-maps-utility-library-v3 - Project Hosting on Google Code">Google Maps Utility Library V3</a> and used under the <a href="http://www.apache.org/licenses/LICENSE-2.0" title="">Apache License 2.0</a>.</li>
 		</ul>
     </div>
-    <div class="span5 columns">
-      <h3>Contact</h3>
-		<p>Michael Parreno-Villa</p>
-    </div>
   </div><!-- /row -->
 </section>
 
+
 <% content_for :footer do %>
-  <div class="inner">
-	<div class="container">
-		<p>
-			Designed and built with all the love in the world by me :)
-		</p>
-  </div>
-</div>
+  <%= render(:partial => 'shared/footer') %>
 <% end %>
