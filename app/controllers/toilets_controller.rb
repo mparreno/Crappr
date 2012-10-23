@@ -1,7 +1,7 @@
 class ToiletsController < ApplicationController
   respond_to :html, :js, :mobile
   before_filter :load_toilet, :except => [:index]
-  
+
   def index
     @toilets = Toilet.scoped
       .in_suburb(params[:suburb_id])
@@ -11,7 +11,7 @@ class ToiletsController < ApplicationController
     @toilets = @toilets.paginate(params[:page]) if params[:page]
     respond_to do |format|
       format.mobile { render :template => 'toilets/mobile/index' }
-      format.json   { render :json => @toilets, :methods => [:dist, :rating] }
+      format.json   { render :json => @toilets, :methods => [:dist, :rating, :rating_count] }
       format.all
     end
   end
@@ -25,9 +25,9 @@ class ToiletsController < ApplicationController
       format.all
     end
   end
-  
+
   private
-  
+
   def load_toilet
     @toilet = Toilet.find(params[:id])
   end
