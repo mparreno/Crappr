@@ -1,3 +1,7 @@
+// Crappr Mobile Javascripts
+//
+//= require jquery
+//= require jquery_ujs
 
 
 $("#gps-btn").click(function() {

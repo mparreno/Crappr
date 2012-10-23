@@ -53,7 +53,7 @@ function getInfoWindowTextForToilet(name, link) {
 
 function addToiletMarker(name, latlng, link, icon) {
     var infowindow = new google.maps.InfoWindow({ content: getInfoWindowTextForToilet(name, link) });
-    var marker = new google.maps.Marker({ position: latlng, map: map, title: name, icon: '/images/'+icon});
+    var marker = new google.maps.Marker({ position: latlng, map: map, title: name, icon: '/assets/'+icon});
     markers.push(marker); 
     google.maps.event.addListener(marker, 'click', function() { infowindow.open(map, marker); });
 }
@@ -100,20 +100,18 @@ function getMarkersFor(url, cluster){
 	$.getJSON(url, function(data) {
 	
 		$.each(data, function(key, val) {
-					val.toilet.location + 
-					addToiletMarker(val.toilet.location, 
-						new google.maps.LatLng(val.toilet.lat,val.toilet.lng), 
-						"<a href='/toilets/"+val.toilet.to_param+"'>View more information</a>", 
+					val.location + 
+					addToiletMarker(val.location, 
+						new google.maps.LatLng(val.lat,val.lng), 
+						"<a href='/toilets/"+val.to_param+"'>View more information</a>", 
 						"toilet.png"
 						);
 	  	});
 			if (cluster) {
-				var mcOptions     = { gridSize: 50, maxZoom: 12 };
+				var mcOptions     = { gridSize: 50, maxZoom: 12, imagePath: '/assets/m' };
 				var markerCluster = new MarkerClusterer(map, markers, mcOptions);
 			}
 	
 	});
 	
 }
-
-
