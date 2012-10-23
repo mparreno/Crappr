@@ -19,14 +19,21 @@ class Toilet < ActiveRecord::Base
         order('average desc').
         limit(limit)
     }
-  
+
+  scope :in_suburb, lambda { |suburb_id| 
+    suburb_id ? where(:suburb_id => suburb_id) : where('1=1')
+  }
+
+  scope :nearby, lambda { |lat, lng|
+    return scoped unless lat && lng
+    default_range = 500
+    near(:origin => [lat.to_f, lng.to_f], :within => default_range)
+  }  
+
   # Class Methods
   def self.top(num)
-    toilets = []
-    top_ids(num).each do |t|
-      toilets << find(t.id)
-    end
-    toilets
+    return scoped if num.nil?
+    self.where(:id => top_ids(num))
   end
   
   # Instance Methods   
@@ -42,7 +49,7 @@ class Toilet < ActiveRecord::Base
   # Found issue here: https://rails.lighthouseapp.com/projects/8994/tickets/4840-to_xml-doesnt-work-in-such-case-eventselecttitle-as-tto_xml
   # TODO: fix later
   def dist
-    if try(:distance)
+    if respond_to?(:distance)
       distanceize(distance, "m", false)
     end
   end

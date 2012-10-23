@@ -8,7 +8,7 @@ describe ToiletsController do
       get :index
     end
 
-    it { assigns(:toilets).should be_a Array }
+    it { assigns(:toilets).should be_a ActiveRecord::Relation }
     it { response.should render_template :index }
   end
 

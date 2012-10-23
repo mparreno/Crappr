@@ -10,6 +10,7 @@ FactoryGirl.define do
     t.lng 174.75762
   end
 
+
   factory :review do |r|
     r.name "Tester"
     r.value 3

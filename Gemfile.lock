@@ -199,6 +199,10 @@ GEM
     shoulda-context (1.0.0)
     shoulda-matchers (1.4.1)
       activesupport (>= 3.0.0)
+    simplecov (0.7.1)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.7.1)
+    simplecov-html (0.7.1)
     sinatra (1.0)
       rack (>= 1.0)
     spork (0.9.0.rc9)
@@ -251,6 +255,7 @@ DEPENDENCIES
   rails (~> 3.2)
   rspec-rails (~> 2.2)
   shoulda
+  simplecov
   spork (~> 0.9.0.rc)
   taps
   test-unit

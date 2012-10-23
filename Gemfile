@@ -13,6 +13,7 @@ group :development, :test do
   #Speccing
   gem 'rspec-rails', '~> 2.2'
   gem 'factory_girl_rails'
+  gem 'simplecov'
   gem 'shoulda'
   gem 'capybara'
   gem 'launchy'
