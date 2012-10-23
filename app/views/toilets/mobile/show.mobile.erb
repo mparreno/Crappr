@@ -3,8 +3,8 @@
 <% end %>
 
 <% content_for :after_load do %>
-$(".tabs li").click(function() { 
-	$(".tabs li").removeClass('active');
+$(".nav-tabs li").click(function() { 
+	$(".nav-tabs li").removeClass('active');
 	$(this).addClass('active');
 	
 	$("section#toilet div").not('.page-header').hide();
@@ -25,7 +25,7 @@ jQuery.fn.submitWithAjax = function() {
     $.post(this.action, $(this).serialize(), function(data){
 		$('#reviews_add_form').hide();
 		if( $('#reviews_list ul.listview').length ){
-			$("#reviews_list ul.listview").prepend(reviewListItem(data.review.name, data.review.created_at, data.review.text, data.review.value));
+			$("#reviews_list ul.listview").prepend(reviewListItem(data.name, data.created_at, data.text, data.value));
 			$('#reviews_list ul li').removeClass('top bottom');
 			$('#reviews_list ul li:first').addClass('top');
 			$('#reviews_list ul li:last-child').addClass('bottom');
@@ -43,7 +43,7 @@ $(document).ready(function() {
 
 <% end %>
 
-<ul class="tabs">
+<ul class="nav nav-tabs">
   <li class="active"><a href="" data-function='loadDetails'>Info</a></li>
   <li><a href="" data-function='loadMap'>Map</a></li>
   <li><a href="" data-function='loadStreet'>StreetView</a></li>
@@ -83,7 +83,7 @@ $(document).ready(function() {
 	</div>
 	<div id="reviews_add_form" class="" style='display:none;'>
 
-		<% form_tag toilet_reviews_path(@toilet, :format => 'json'), :class => 'reviews_add_form', :name => 'reviews_add_form' do %>
+		<%= form_tag toilet_reviews_path(@toilet, :format => 'json'), :class => 'reviews_add_form', :name => 'reviews_add_form' do %>
 		  <fieldset>
 		  <legend>Write a Review:</legend>
 		  <div class="clearfix">
@@ -139,7 +139,7 @@ function loadReviews(){
   	items = [];
 
   	$.each(data, function(key, val) {
-      items.push(reviewListItem(val.review.name, val.review.created_at, val.review.text, val.review.value));
+      items.push(reviewListItem(val.name, val.created_at, val.text, val.value));
   });
 	$('#reviews_list').html(  
 		$('<ul/>', {

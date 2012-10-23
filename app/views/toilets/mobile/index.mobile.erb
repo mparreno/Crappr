@@ -56,8 +56,8 @@ function loadSuburbs(){
 		items = [];
 		$.each(data, function(key, val) {
 	    items.push('<li id="' + key + '" class="listview-container">' + 
-					'<div class="inner"><div class="text"><a href="/suburbs/'+ val.suburb.id + '">' +
-					'<h3 class="heading">'+ val.suburb.name + '</h3>' +
+					'<div class="inner"><div class="text"><a href="/suburbs/'+ val.id + '">' +
+					'<h3 class="heading">'+ val.name + '</h3>' +
 					'</div>' +
 					'</a></div>' +
 					'<span class="arrow"></span></div></li>');
@@ -84,9 +84,9 @@ function loadTop10(){
 		items = [];
 		$.each(data, function(key, val) {
 	    items.push('<li id="' + key + '" class="listview-container">' + 
-					'<div class="inner"><div class="text"><a href="/toilets/'+ val.toilet.id + '">' +
-					'<h3 class="heading">'+ val.toilet.location + '</h3>' +
-					'<p class="rating">' + drawStars(val.toilet.rating) + '</p>' +
+					'<div class="inner"><div class="text"><a href="/toilets/'+ val.id + '">' +
+					'<h3 class="heading">'+ val.location + '</h3>' +
+					'<p class="rating">' + drawStars(val.rating) + '</p>' +
 					'</div>' +
 					'</a></div>' +
 					'<span class="arrow"></span></div></li>');
@@ -117,9 +117,9 @@ function loadIndex(){
 		items = [];
 		$.each(data, function(key, val) {
 	    items.push(	'<li id="' + key + '" class="listview-container">' + 
-						'<div class="inner"><div class="text"><a href="/toilets/'+ val.toilet.id + '">' +
-						'<h3 class="heading">'+ val.toilet.location + '</h3>' +
-						'<p class="rating">' + drawStars(val.toilet.rating) + '</p>' +
+						'<div class="inner"><div class="text"><a href="/toilets/'+ val.id + '">' +
+						'<h3 class="heading">'+ val.location + '</h3>' +
+						'<p class="rating">' + drawStars(val.rating) + '</p>' +
 						'</div>' +
 						'</a></div>' +
 						'<span class="arrow"></span></div></li>');
